@@ -1,0 +1,271 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F8F4EC;
+  --color-cream: #EFE7DA;
+  --color-maroon: #5C1A1B;
+  --color-maroon-dark: #3D0F10;
+  --color-maroon-deep: #2A0A0B;
+  --color-gold: #B08D57;
+  --color-gold-light: #D4AF7A;
+  --color-gold-muted: #8E7145;
+  --color-ink: #1C1C1C;
+  --color-ink-muted: #666666;
+  --font-serif: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-sans: var(--font-jost), 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-hindi: var(--font-hindi), 'Tiro Devanagari Hindi', serif;
+}
+
+/* Base Body Styles */
+html {
+  background-color: #F8F4EC;
+  color: #1C1C1C;
+  scroll-behavior: auto; /* Handled smoothly by Lenis */
+  font-family: var(--font-sans), sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #F8F4EC;
+  color: #1C1C1C;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #5C1A1B;
+  color: #F8F4EC;
+}
+
+/* Typography Utility */
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), -apple-system, sans-serif;
+}
+
+.font-hindi {
+  font-family: var(--font-hindi), serif;
+}
+
+/* Button with sliding fill animation from left to right */
+.btn-luxury {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 400;
+  border: 1px solid #B08D57;
+  color: #1C1C1C;
+  background: transparent;
+  overflow: hidden;
+  transition: color 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.45s ease;
+  z-index: 1;
+}
+
+.btn-luxury::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #5C1A1B;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: -1;
+}
+
+.btn-luxury:hover {
+  color: #F8F4EC;
+  border-color: #5C1A1B;
+}
+
+.btn-luxury:hover::before {
+  transform: scaleX(1);
+}
+
+/* Maroon Variant Button */
+.btn-luxury-maroon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 400;
+  border: 1px solid #5C1A1B;
+  color: #F8F4EC;
+  background: #5C1A1B;
+  overflow: hidden;
+  transition: color 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.45s ease;
+  z-index: 1;
+}
+
+.btn-luxury-maroon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #B08D57;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: -1;
+}
+
+.btn-luxury-maroon:hover {
+  color: #1C1C1C;
+  border-color: #B08D57;
+}
+
+.btn-luxury-maroon:hover::before {
+  transform: scaleX(1);
+}
+
+/* Light border button for dark backgrounds */
+.btn-luxury-light {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 400;
+  border: 1px solid rgba(248, 244, 236, 0.4);
+  color: #F8F4EC;
+  background: transparent;
+  overflow: hidden;
+  transition: color 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.45s ease;
+  z-index: 1;
+}
+
+.btn-luxury-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #B08D57;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: -1;
+}
+
+.btn-luxury-light:hover {
+  color: #1C1C1C;
+  border-color: #B08D57;
+}
+
+.btn-luxury-light:hover::before {
+  transform: scaleX(1);
+}
+
+/* Infinite Marquee Animations */
+@keyframes marqueeLeft {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 38s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeRight 38s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee-left,
+.marquee-container:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+/* Subtle Royal Pattern */
+.bg-royal-pattern {
+  background-image: radial-gradient(rgba(176, 141, 87, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-maroon-pattern {
+  background-image: radial-gradient(rgba(176, 141, 87, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Rotating Stamp Badge */
+@keyframes spinBadge {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-badge {
+  animation: spinBadge 20s linear infinite;
+}
+
+/* Preloader Circle Draw */
+@keyframes drawCircle {
+  0% { stroke-dashoffset: 283; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.animate-draw-circle {
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  animation: drawCircle 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Line mask reveal helper */
+.line-reveal-mask {
+  overflow: hidden;
+  display: block;
+}
+
+/* Lenis recommended styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

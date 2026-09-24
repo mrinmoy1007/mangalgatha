@@ -1,0 +1,6 @@
+{
+  "name": "Mangalgatha — Luxury Indian Wedding Planner",
+  "description": "Mangalgatha is a premier luxury Indian wedding planning company based in Delhi, crafting timeless royal celebrations, bespoke destination weddings, and couture experiences across India and beyond.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
