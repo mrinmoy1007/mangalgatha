@@ -94,3 +94,7 @@ npm run build
 # Start production server
 npm run start
 ```
+npm run build — production build
+npm run start — serve the production build (run after build)
+npm run lint — ESLint
+npm run clean — clears the .next build cache

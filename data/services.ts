@@ -20,7 +20,7 @@ export const servicesData: Service[] = [
     title: 'Full Wedding Planning',
     shortDesc: 'End-to-end custom orchestration from the first sketch to the final farewell, executed with high-end precision.',
     fullDesc: 'Our flagship service conceives and executes your entire wedding journey as a singular work of art. From conceptual narrative design, venue acquisition, budget architecture, guest concierge, and vendor orchestration to 24/7 on-ground protocol, we curate every heartbeat of your celebration.',
-    heroImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop',
+    heroImage: '/images/Untitled design 21.png',
     alt: 'Grand royal Indian wedding mandap ceremony at twilight',
     features: [
       'Comprehensive Wedding Blueprint & Timeline',
@@ -36,10 +36,10 @@ export const servicesData: Service[] = [
       { step: '04', title: 'Flawless Symphony', desc: 'Multi-tiered on-ground team orchestrating every ritual with silent, flawless perfection.' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop'
+      '/images/Untitled design 23.png',
+      '/images/Untitled design 14.png',
+      '/images/Untitled design 7.png',
+      '/images/Untitled design 35.png'
     ]
   },
   {
@@ -49,7 +49,7 @@ export const servicesData: Service[] = [
     title: 'Destination Weddings',
     shortDesc: 'Palatial forts of Rajasthan, Mediterranean seaside villas, and tropical sanctuaries transformed into royal empires.',
     fullDesc: 'Whether commanding a 16th-century fortress in Udaipur, an oceanfront palace in Bali, or an Amalfi Coast estate, Mangalgatha commands global destination logistics with unmatched cultural nuance and logistical mastery.',
-    heroImage: 'https://images.unsplash.com/photo-1565492179225-f3d21a6e996f?q=80&w=1600&auto=format&fit=crop',
+    heroImage: '/images/udaipur wedding.png',
     alt: 'Royal Indian destination wedding couple portrait overlooking palace waters',
     features: [
       'Private Island & Heritage Palace Buyouts',
@@ -65,10 +65,10 @@ export const servicesData: Service[] = [
       { step: '04', title: 'Destination Concierge', desc: '24/7 bilingual liaison managing room drops, styling emergencies, and excursions.' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1519225424982-f5f4b5952f53?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1546815140-6927d6c6ffc6?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1200&auto=format&fit=crop'
+      '/images/Untitled design 9.png',
+      '/images/Untitled design 18.png',
+      '/images/Untitled design 32.png',
+      '/images/Untitled design 11.png'
     ]
   },
   {
@@ -78,7 +78,7 @@ export const servicesData: Service[] = [
     title: 'Décor & Event Design',
     shortDesc: 'Custom spatial design blending heritage motifs, architectural floristry, and sculptural lighting.',
     fullDesc: 'We treat every venue as a sacred theatrical canvas. Our in-house event designers, lighting designers, and botanical artists sculpt immersive environments that evoke romantic nostalgia while defying ordinary conventions.',
-    heroImage: 'https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?q=80&w=1600&auto=format&fit=crop',
+    heroImage: '/images/mandap decore.png',
     alt: 'Botanical floral mandap adorned with fresh blossoms and brass lamps',
     features: [
       'Architectural Floral Installations',
@@ -94,10 +94,10 @@ export const servicesData: Service[] = [
       { step: '04', title: 'Atmospheric Transformation', desc: 'Illuminating courtyards with thousands of wax lanterns and intelligent pin-spotting.' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1525258946800-98cfd34727e6?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=1200&auto=format&fit=crop'
+      '/images/decore.png',
+      '/images/flower decore.png',
+      '/images/Untitled design 24.png',
+      '/images/venue decore 4.png'
     ]
   },
   {
@@ -107,7 +107,7 @@ export const servicesData: Service[] = [
     title: 'Mehendi, Haldi & Sangeet',
     shortDesc: 'Vibrant daytime rituals steeped in joyful tradition, transforming into electrifying theatrical evening soirees.',
     fullDesc: 'From sundrenched yellow courtyards infused with chandan and rose petals to Broadway-grade Sangeet stages featuring international choreographers and concert audio, we craft the pulse of pre-wedding revelry.',
-    heroImage: 'https://images.unsplash.com/photo-1611042553365-9b101441c135?q=80&w=1600&auto=format&fit=crop',
+    heroImage: '/images/Untitled design 39.png',
     alt: 'Joyful Haldi ceremony flower shower with yellow marigold petals',
     features: [
       'Thematic Haldi Poolside & Garden Sanctuaries',
@@ -123,10 +123,10 @@ export const servicesData: Service[] = [
       { step: '04', title: 'Revelry Management', desc: 'Effortless pacing so families revel unburdened till early dawn.' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1604017011826-d3b4c23f8914?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?q=80&w=1200&auto=format&fit=crop'
+      '/images/Untitled design 17.png',
+      '/images/Untitled design 18.png',
+      '/images/haldi.png',
+      '/images/Untitled design 29.png'
     ]
   },
   {
@@ -136,7 +136,7 @@ export const servicesData: Service[] = [
     title: 'Venue & Hospitality Management',
     shortDesc: 'Hospitality redefined with custom concierge desks, private butler wings, and premium protocol.',
     fullDesc: 'Warm Indian hospitality executed with five-star precision. We manage high-profile guest registries, private flight charters, personalized welcome suites, dietary curations, and round-the-clock room concierges.',
-    heroImage: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1600&auto=format&fit=crop',
+    heroImage: '/images/Untitled design 24.png',
     alt: 'Royal Rajasthani palace courtyard and wedding hospitality pavilion',
     features: [
       'Dedicated Guest Experience App & WhatsApp Desk',
@@ -152,10 +152,10 @@ export const servicesData: Service[] = [
       { step: '04', title: 'Seamless Checkouts', desc: 'Express baggage collection, return hampers, and airport escorting.' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop'
+      '/images/Untitled design 26.png',
+      '/images/Untitled design 33.png',
+      '/images/Untitled design 35.png',
+      '/images/car flower decore.png'
     ]
   },
   {
@@ -165,7 +165,7 @@ export const servicesData: Service[] = [
     title: 'Photography & Entertainment Curation',
     shortDesc: 'Legendary editorial storytellers, heritage classical maestros, and headline musical acts tailored for your legacy.',
     fullDesc: 'We collaborate with the world’s most celebrated wedding filmmakers and fashion photographers, coupled with legendary Sufi vocalists, classical sitar masters, and Bollywood headliners to curate unforgettable moments.',
-    heroImage: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1600&auto=format&fit=crop',
+    heroImage: '/images/Untitled design 13.png',
     alt: 'Editorial portrait of an Indian couture bride in regal lehenga',
     features: [
       'Vogue-Style Editorial Fashion Shoots',
@@ -181,10 +181,10 @@ export const servicesData: Service[] = [
       { step: '04', title: 'Heirloom Archiving', desc: 'Museum-grade fine-art prints, trailer cuts, and archival master hard drives.' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544078751-58fee2d8a03b?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1519225424980-975ab3be0a70?q=80&w=1200&auto=format&fit=crop'
+      '/images/Untitled design 16.png',
+      '/images/Untitled design 27.png',
+      '/images/entertainment.png',
+      '/images/entertainment 2.png'
     ]
   }
 ];

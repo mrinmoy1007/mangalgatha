@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: 'Mangalgatha',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop',
+        url: '/images/pre-wedd-shoot.png',
         width: 1200,
         height: 630,
         alt: 'Mangalgatha Luxury Indian Wedding Scenography'
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: 'Mangalgatha | Luxury Indian Wedding Planner',
     description:
       'Every wedding is a story. We write yours with couture restraint, sacred Vedic authenticity, and monumental spatial poetry.',
-    images: ['https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop'],
+    images: ['/images/Untitled design 6.png'],
   },
   robots: {
     index: true,

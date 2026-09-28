@@ -46,7 +46,7 @@ export default function IntroSection() {
                 data-cursor-text="STUDIO"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1565492179225-f3d21a6e996f?q=80&w=1200&auto=format&fit=crop"
+                  src="/images/Untitled design 40.png"
                   alt="Royal Indian wedding celebration by Mangalgatha"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"

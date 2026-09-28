@@ -24,7 +24,7 @@ export const studiosData: Studio[] = [
     email: 'info@mangalgatha.in',
     hours: 'Monday – Saturday: 10:30 AM – 7:30 PM (By Private Appointment)',
     mapUrl: 'https://maps.google.com/?q=The+Dhan+Mill+Chhatarpur+New+Delhi',
-    image: 'https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?q=80&w=1000&auto=format&fit=crop'
+    image: '/images/Untitled design 6.png'
   },
   {
     city: 'Kolkata',
@@ -37,7 +37,7 @@ export const studiosData: Studio[] = [
     email: 'info@mangalgatha.in',
     hours: 'Monday – Saturday: 10:30 AM – 7:30 PM (By Private Appointment)',
     mapUrl: 'https://maps.google.com/?q=Park+Street+Kolkata',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1000&auto=format&fit=crop'
+    image: '/images/Untitled design 9.png'
   },
   {
     city: 'Pune',
@@ -50,6 +50,6 @@ export const studiosData: Studio[] = [
     email: 'info@mangalgatha.in',
     hours: 'Monday – Saturday: 10:00 AM – 7:00 PM (By Private Appointment)',
     mapUrl: 'https://maps.google.com/?q=Koregaon+Park+Pune',
-    image: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1000&auto=format&fit=crop'
+    image: '/images/Untitled design 10.png'
   }
 ];

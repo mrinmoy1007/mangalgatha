@@ -132,7 +132,7 @@ export default function HeroSection() {
           {/* Top Left Image */}
           <div className="w-44 xl:w-56 aspect-[3/4] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img -translate-y-6">
             <Image
-              src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop"
+              src="/images/Untitled design 14.png"
               alt="Indian royal couture bride in crimson lehenga"
               fill
               priority
@@ -146,7 +146,7 @@ export default function HeroSection() {
           {/* Bottom Left Image */}
           <div className="w-36 xl:w-48 aspect-[2/3] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img translate-x-8 translate-y-6">
             <Image
-              src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?q=80&w=800&auto=format&fit=crop"
+              src="/images/Untitled design 38.png"
               alt="Sacred Indian wedding mandap with fresh floral blooms"
               fill
               sizes="(max-width: 1280px) 144px, 192px"
@@ -193,7 +193,7 @@ export default function HeroSection() {
           {/* Top Right Image */}
           <div className="w-36 xl:w-48 aspect-[2/3] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img -translate-x-6 -translate-y-8">
             <Image
-              src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=800&auto=format&fit=crop"
+              src="/images/Untitled design 20.png"
               alt="Couture bridal emerald polki jewelry and veil"
               fill
               sizes="(max-width: 1280px) 144px, 192px"
@@ -206,7 +206,7 @@ export default function HeroSection() {
           {/* Bottom Right Image */}
           <div className="w-44 xl:w-56 aspect-[3/4] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img translate-y-8">
             <Image
-              src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop"
+              src="/images/Untitled design.png"
               alt="Royal palace illuminated for luxury wedding celebrations"
               fill
               sizes="(max-width: 1280px) 176px, 224px"

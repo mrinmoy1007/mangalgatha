@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef, useSyncExternalStore } from 'react';
+import Image from 'next/image';
 import { gsap } from 'gsap';
 
 export default function Preloader() {
@@ -129,14 +130,16 @@ export default function Preloader() {
           </div>
         </div>
 
-        {/* Brand Name & Counter */}
+        {/* Brand Logo & Counter */}
         <div className="text-center space-y-2">
-          <div className="font-serif text-lg tracking-[0.25em] text-[#5C1A1B] uppercase">
-            Mangalgatha
-          </div>
-          <div className="text-[10px] tracking-[0.3em] text-[#8E7145] uppercase font-sans">
-            Creators of Auspicious Stories
-          </div>
+          <Image
+            src="/images/mglogo.png"
+            alt="Mangalgatha"
+            width={2000}
+            height={1000}
+            priority
+            className="w-64 h-auto sm:w-72"
+          />
           <div className="pt-4 font-sans text-xs tracking-[0.25em] text-[#1C1C1C]">
             {progress.toString().padStart(2, '0')}%
           </div>

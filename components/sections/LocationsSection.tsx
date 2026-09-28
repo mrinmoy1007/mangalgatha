@@ -46,7 +46,7 @@ export default function LocationsSection() {
       {/* Full-width Background Image with Slow Parallax */}
       <div ref={bgRef} className="absolute -inset-y-24 inset-x-0 z-0 h-[130%]">
         <Image
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000&auto=format&fit=crop"
+          src="/images/Untitled design 9.png"
           alt="Grand royal wedding venue illuminated under starlight"
           fill
           sizes="100vw"

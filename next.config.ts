@@ -10,7 +10,6 @@ const nextConfig: NextConfig = {
   },
   // Allow access to remote image placeholders and Unsplash.
   images: {
-    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -26,6 +25,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  output: 'standalone',
   transpilePackages: ['motion', 'gsap', 'lenis'],
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.

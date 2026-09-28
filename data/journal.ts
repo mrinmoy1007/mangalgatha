@@ -17,7 +17,7 @@ export const journalArticlesData: JournalArticle[] = [
     readTime: '6 min read',
     publishedDate: 'January 2026',
     excerpt: 'How we deconstruct Vedic geometry and reassemble it with architectural botanicals to preserve the sanctity of the sacred fire.',
-    coverImage: 'https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/Untitled design 10.png',
     content: [
       'In Vedic philosophy, the mandap is not merely a stage; it is the micro-cosmos of the universe. The four pillars represent the four stages of human life and the four parents who nurture the union.',
       'When designing within heritage palace courtyards—where ancient sandstone and marble jharokhas possess their own formidable voice—the mandap must never compete. It must emerge organically, as though grown from the earth centuries ago.',
@@ -31,7 +31,7 @@ export const journalArticlesData: JournalArticle[] = [
     readTime: '8 min read',
     publishedDate: 'February 2026',
     excerpt: 'Behind the velvet curtain: charter coordination, private fort access, and the silent choreography of 500 guests across centuries-old citadels.',
-    coverImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/Untitled design 30.png',
     content: [
       'Transporting five hundred discerning international guests into a 16th-century clifftop fort requires the precision of a diplomatic summit disguised as royal celebration.',
       'From custom airstrip welcomes in Jodhpur and Udaipur to dedicated fleet liaisons managing luggage drops directly into suites before guests finish their first glass of saffron lassi, every touchpoint must breathe effortless calm.',
@@ -45,7 +45,7 @@ export const journalArticlesData: JournalArticle[] = [
     readTime: '5 min read',
     publishedDate: 'March 2026',
     excerpt: 'Why the era of generic multi-cuisine buffets is over, and how bespoke royal thalis and forgotten nizami recipes are reclaiming the wedding feast.',
-    coverImage: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop',
+    coverImage: '/images/Untitled design 40.png',
     content: [
       'True luxury in hospitality is hyper-locality. When guests travel across oceans to Rajasthan or Goa, they yearn for culinary authenticity elevated to Michelin standards.',
       'We collaborate directly with royal culinary historians and khansamas whose lineages served the royal kitchens of Rampur, Mewar, and Hyderabad to recreate slow-smoked meats and silver-leaf desserts.'
