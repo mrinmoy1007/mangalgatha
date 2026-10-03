@@ -13,7 +13,7 @@ export default function Marquee({
   items,
   direction = 'left',
   className = '',
-  speed = 36,
+  speed = 55,
 }: MarqueeProps) {
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -29,8 +29,8 @@ export default function Marquee({
 
       if (contentRef.current) {
         // Smoothly adjust animation duration
-        const boost = Math.min(currentVelocity * 0.08, 2.5);
-        const effectiveSpeed = Math.max(8, speed / (1 + boost));
+        const boost = Math.min(currentVelocity * 0.02, 0.5);
+        const effectiveSpeed = Math.max(18, speed / (1 + boost));
         contentRef.current.style.animationDuration = `${effectiveSpeed}s`;
       }
       animFrame = requestAnimationFrame(checkVelocity);

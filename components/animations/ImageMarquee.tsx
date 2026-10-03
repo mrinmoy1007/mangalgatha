@@ -13,7 +13,7 @@ interface ImageMarqueeProps {
 export default function ImageMarquee({
   images,
   direction = 'left',
-  speed = 25,
+  speed = 20,
   itemClassName = 'w-55 h-68 sm:w-52 sm:h-64',
 }: ImageMarqueeProps) {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -29,8 +29,8 @@ export default function ImageMarquee({
           : 0;
 
       if (contentRef.current) {
-        const boost = Math.min(currentVelocity * 0.08, 1.5);
-        const effectiveSpeed = Math.max(10, speed / (1 + boost));
+        const boost = Math.min(currentVelocity * 0.02, 0.5);
+        const effectiveSpeed = Math.max(18, speed / (1 + boost));
         contentRef.current.style.animationDuration = `${effectiveSpeed}s`;
       }
       animFrame = requestAnimationFrame(checkVelocity);

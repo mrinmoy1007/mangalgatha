@@ -24,7 +24,7 @@ export default function MarqueeAndSignatureSection() {
         <Marquee
           items={marqueeItems}
           direction="left"
-          speed={32}
+          speed={55}
           className="font-serif text-2xl sm:text-3xl md:text-4xl uppercase tracking-[0.18em] text-[#5C1A1B] font-light"
         />
 
@@ -32,7 +32,7 @@ export default function MarqueeAndSignatureSection() {
         <Marquee
           items={marqueeItems}
           direction="right"
-          speed={34}
+          speed={55}
           className="font-sans text-xs sm:text-sm uppercase tracking-[0.35em] text-[#8E7145] font-normal"
         />
       </div>
