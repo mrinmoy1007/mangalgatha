@@ -58,7 +58,7 @@ export default function Footer() {
           {/* Col 1: Brand & Philosophy (3 cols) */}
           <div className="lg:col-span-3 space-y-6">
             <div className="space-y-1">
-              <img src="/images/mglogo.png" alt="Mangalgatha Logo" className="h-20 w-auto mb-4 object-contain" />
+              <img src="/images/mglogow.png" alt="Mangalgatha Logo" className="h-20 w-auto mb-4 object-contain" />
             </div>
             <p className="text-xs text-[#EFE7DA]/70 leading-relaxed font-light font-sans max-w-xs">
               Every wedding is a story. We design yours with elegant simplicity, authentic traditions, and breathtaking spaces.
