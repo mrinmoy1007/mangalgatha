@@ -51,12 +51,12 @@ export default function TestimonialsSection() {
 
                 {/* Couple and Location Details */}
                 <div className="pt-4 space-y-1">
-                  <h4 className="font-sans text-xs uppercase tracking-[0.25em] font-medium text-[#5C1A1B]">
+                  {/* <h4 className="font-sans text-xs uppercase tracking-[0.25em] font-medium text-[#5C1A1B]">
                     {item.couple}
                   </h4>
                   <p className="text-[11px] uppercase tracking-[0.2em] text-[#8E7145] font-sans font-light">
                     {item.venue} · {item.location}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </SwiperSlide>

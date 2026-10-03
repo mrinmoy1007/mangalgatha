@@ -9,10 +9,8 @@ import MagneticButton from '@/components/animations/MagneticButton';
 
 export default function IntroSection() {
   const statementLines = [
-    'WHERE TIMELESS',
-    'TRADITIONS MEET',
-    'CONTEMPORARY',
-    'WEDDING ARTISTRY.'
+    'WHERE TIMELESS TRADITIONS MEET',
+    ' CONTEMPORARY WEDDING ARTISTRY.'
   ];
 
   return (
@@ -30,8 +28,8 @@ export default function IntroSection() {
         <div className="mb-20 lg:mb-28 max-w-6xl">
           <SplitTextReveal
             lines={statementLines}
-            tag="h2"
-            lineClassName="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] font-light text-[#1C1C1C] uppercase tracking-tight"
+            tag="h3"
+            lineClassName="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-light text-[#1C1C1C] uppercase tracking-tight"
           />
         </div>
 
