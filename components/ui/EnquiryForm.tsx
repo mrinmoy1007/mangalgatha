@@ -171,7 +171,7 @@ export default function EnquiryForm() {
               className="w-full bg-white/70 border border-[#B08D57]/40 px-4 py-3 text-xs text-[#1C1C1C] font-sans focus:outline-hidden focus:border-[#5C1A1B] transition-colors"
             >
               <option value="Udaipur, Rajasthan">Udaipur, Rajasthan</option>
-              <option value="Jaipur, Rajasthan">Jaipur, Rajasthan</option>S
+              <option value="Jaipur, Rajasthan">Jaipur, Rajasthan</option>
               <option value="Jodhpur, Rajasthan">Jodhpur, Rajasthan</option>
               <option value="Delhi NCR ">Delhi NCR </option>
               <option value="Goa (Beachside / Heritage Villa)">Goa (Beachside / Heritage Villa)</option>
