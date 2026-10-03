@@ -38,12 +38,12 @@ export default function ServicesSliderSection() {
           <div>
             <div className="flex items-center gap-3 mb-2">
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF7A] font-sans">
-                Curated Disciplines
+                Services
               </span>
               <div className="w-12 h-[1px] bg-[#B08D57]" />
             </div>
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight font-light text-[#F8F4EC]">
-              What We Curate
+              What We Provide
             </h2>
           </div>
 
@@ -86,7 +86,7 @@ export default function ServicesSliderSection() {
           fadeEffect={{ crossFade: true }}
           speed={1000}
           loop={true}
-          autoplay={{ delay: 7000, disableOnInteraction: false }}
+          autoplay={{ delay: 1000, disableOnInteraction: false }}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
@@ -101,9 +101,9 @@ export default function ServicesSliderSection() {
                 {/* Left Content Column (7 cols) */}
                 <div className="lg:col-span-7 space-y-8">
                   {/* Gold Number */}
-                  <div className="font-serif text-6xl sm:text-7xl lg:text-8xl font-light text-[#B08D57]/80 leading-none">
+                  {/* <div className="font-serif text-6xl sm:text-7xl lg:text-8xl font-light text-[#B08D57]/80 leading-none">
                     {service.number}
-                  </div>
+                  </div> */}
 
                   {/* Service Title */}
                   <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl uppercase tracking-wide text-[#F8F4EC] font-light">
@@ -132,7 +132,7 @@ export default function ServicesSliderSection() {
                         href={`/services/${service.slug}`}
                         className="btn-luxury-light"
                       >
-                        Explore Discipline
+                        Explore {service.title} →
                       </Link>
                     </MagneticButton>
                   </div>

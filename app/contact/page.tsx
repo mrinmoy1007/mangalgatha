@@ -99,7 +99,7 @@ export default function ContactPage() {
                   <Mail className="w-3.5 h-3.5 text-[#B08D57]" />
                   <span>General: </span>
                   <a href="mailto:concierge@mangalgatha.com" className="text-[#5C1A1B] underline hover:text-[#B08D57]">
-                    concierge@mangalgatha.com
+                    info@mangalgatha.in
                   </a>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-sans text-[#1C1C1C]">
@@ -113,7 +113,7 @@ export default function ContactPage() {
             <div className="border border-[#B08D57]/40 shadow-lg overflow-hidden space-y-3">
               <div className="bg-[#5C1A1B] text-[#F8F4EC] px-6 py-3 flex items-center justify-between">
                 <span className="text-[10px] uppercase tracking-[0.25em] font-sans text-[#D4AF7A]">
-                  Delhi NCR Studio Map
+                  Delhi NCR  Map
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-[#EFE7DA]/70 font-sans">
                   The Dhan Mill, Chhatarpur

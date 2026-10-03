@@ -51,7 +51,7 @@ export default function StoriesPage() {
                 href={`/stories/${story.slug}`}
                 className="group block bg-[#EFE7DA]/50 border border-[#B08D57]/30 shadow-md hover:border-[#5C1A1B] transition-colors overflow-hidden"
                 data-cursor="view"
-                data-cursor-text="CHRONICLE"
+                data-cursor-text="VIEW"
               >
                 {/* Tall Image */}
                 <div className="relative aspect-[3/4] overflow-hidden">

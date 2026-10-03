@@ -68,7 +68,6 @@ export default function HeroSection() {
           width: '100vw',
           height: '100vh',
           maxWidth: '100vw',
-          maxHeight: '100vh',
           borderRadius: 0,
           scale: 1.05,
           ease: 'power2.inOut',

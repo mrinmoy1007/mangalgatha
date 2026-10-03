@@ -9,10 +9,10 @@ import MagneticButton from '@/components/animations/MagneticButton';
 
 export default function IntroSection() {
   const statementLines = [
-    'MANGALGATHA IS A LUXURY',
-    'WEDDING PLANNING HOUSE',
-    'CRAFTING TIMELESS CELEBRATIONS',
-    'ACROSS INDIA AND BEYOND.'
+    'WHERE TIMELESS',
+    'TRADITIONS MEET',
+    'CONTEMPORARY',
+    'WEDDING ARTISTRY.'
   ];
 
   return (
@@ -66,13 +66,13 @@ export default function IntroSection() {
             <Reveal delay={0.1}>
               <div className="space-y-6">
                 <span className="text-[10px] uppercase tracking-[0.3em] text-[#5C1A1B] font-semibold block">
-                  The Auspicious Philosophy
+                  THE MANGALGATHA PHILOSOPHY
                 </span>
                 <p className="font-serif text-xl sm:text-2xl text-[#1C1C1C] leading-relaxed font-light">
-                  &ldquo;Mangalgatha&rdquo; translates to <em className="italic text-[#5C1A1B]">an auspicious story</em>. Founded in Delhi, our company operates at the nexus of sacred heritage and modern haute couture.
+                  &ldquo;Mangalgatha&rdquo; meaning an  <em className="italic text-[#5C1A1B]">an auspicious story</em>. was born from a belief that a wedding is more than a beautiful occasion. It is the coming together of two lives, two families, generations of traditions, and countless little moments that deserve to be remembered forever.
                 </p>
                 <p className="text-xs sm:text-sm text-[#555555] leading-relaxed font-sans font-light max-w-xl">
-                  We believe royal Indian ceremonies need not be loud to be unforgettable. By stripping away superficial excess and commissioning the finest artisans, botanists, and sound architects, we transform palaces and private shores into timeless sanctuaries of quiet grandeur.
+                  We craft luxury weddings in India and across the world, bringing together thoughtful storytelling, refined design, cultural authenticity, and seamless execution. Every celebration is designed around the people at its heart — never simply around a trend.
                 </p>
               </div>
             </Reveal>
@@ -81,21 +81,21 @@ export default function IntroSection() {
             <Reveal delay={0.25}>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-6 border-t border-[#B08D57]/20">
                 <div>
-                  <span className="font-serif text-3xl text-[#5C1A1B] block font-light">220+</span>
+                  <span className="font-serif text-3xl text-[#5C1A1B] block font-light">STORY-LED CELEBRATIONS</span>
                   <span className="text-[9px] uppercase tracking-[0.2em] text-[#8E7145] font-sans">
-                    Singular Celebrations
+                    Every wedding begins with understanding the story behind the couple.
                   </span>
                 </div>
                 <div>
-                  <span className="font-serif text-3xl text-[#5C1A1B] block font-light">12</span>
+                  <span className="font-serif text-3xl text-[#5C1A1B] block font-light">THOUGHTFUL ARTISTRY</span>
                   <span className="text-[9px] uppercase tracking-[0.2em] text-[#8E7145] font-sans">
-                    Years of Provenance
+                    From décor and florals to culinary and entertainment experiences, every detail is intentionally curated.
                   </span>
                 </div>
                 <div>
-                  <span className="font-serif text-3xl text-[#5C1A1B] block font-light">14</span>
+                  <span className="font-serif text-3xl text-[#5C1A1B] block font-light">SEAMLESS EXECUTION</span>
                   <span className="text-[9px] uppercase tracking-[0.2em] text-[#8E7145] font-sans">
-                    Global Destinations
+                    One vision, meticulously managed from the first conversation to the final farewell.
                   </span>
                 </div>
               </div>

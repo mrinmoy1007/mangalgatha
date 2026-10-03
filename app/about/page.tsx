@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const { founder, philosophy, team, milestones } = aboutData;
+  const { founder, philosophy, team, closing } = aboutData;
 
   return (
     <div className="pt-24 bg-[#F8F4EC] text-[#1C1C1C]">
@@ -32,7 +32,7 @@ export default function AboutPage() {
           <div className="max-w-5xl">
             <SplitTextReveal
               lines={[
-                'SHEPHERDING SACRED TRADITION',
+                'WHERE SACRED TRADITIONS',
                 'INTO ENDURING FOLKLORE.'
               ]}
               tag="h1"
@@ -41,7 +41,7 @@ export default function AboutPage() {
           </div>
 
           <p className="mt-8 font-serif italic text-xl sm:text-2xl text-[#5C1A1B] max-w-2xl font-light">
-            Founded in Delhi on the tenets of Vedic sanctity, architectural restraint, and couture sophistication.
+           Born from a deep reverence for Indian traditions and an eye for refined detail, Mangalgatha crafts extraordinary wedding experiences that honour where you come from while celebrating where your story is going.
           </p>
         </div>
       </section>
@@ -77,7 +77,7 @@ export default function AboutPage() {
           <div className="lg:col-span-7 space-y-8 lg:pl-6">
             <Reveal delay={0.1}>
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans font-medium block">
-                The Founders’ Genesis
+                OUR PHILOSOPHY
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight font-light text-[#1C1C1C] mt-2">
                 {founder.name}
@@ -117,10 +117,10 @@ export default function AboutPage() {
         <div className="max-w-[1520px] mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans block">
-              Guiding Ethos
+                              OUR APPROACH
             </span>
             <h2 className="font-serif text-4xl sm:text-5xl uppercase tracking-tight font-light text-[#1C1C1C]">
-              Our Four Tenets
+              FROM FIRST CONVERSATION TO LAST DANCE
             </h2>
             <div className="w-16 h-[1px] bg-[#B08D57] mx-auto mt-4" />
           </div>
@@ -202,64 +202,42 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Milestones Timeline Animated on Scroll */}
-      <section className="py-24 lg:py-36 px-6 sm:px-10 lg:px-14 bg-[#1C1C1C] text-[#F8F4EC] border-b border-[#B08D57]/20">
-        <div className="max-w-[1520px] mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF7A] font-sans block">
-              Historic Lineage
-            </span>
-            <h2 className="font-serif text-4xl sm:text-5xl uppercase tracking-tight font-light text-[#F8F4EC]">
-              A Decade of Auspicious Stories
-            </h2>
-            <div className="w-16 h-[1px] bg-[#B08D57] mx-auto mt-4" />
-          </div>
-
-          <div className="relative border-l border-[#B08D57]/40 ml-4 sm:ml-32 md:ml-48 space-y-16 pl-8 sm:pl-16">
-            {milestones.map((m, idx) => (
-              <Reveal key={m.year} delay={idx * 0.1}>
-                <div className="relative group">
-                  {/* Timeline Gold Pin Node */}
-                  <div className="absolute -left-[41px] sm:-left-[73px] top-1.5 w-4 h-4 rounded-full bg-[#1C1C1C] border-2 border-[#B08D57] group-hover:bg-[#B08D57] transition-colors" />
-
-                  {/* Year display */}
-                  <span className="font-serif text-3xl sm:text-4xl text-[#D4AF7A] font-light block mb-2">
-                    {m.year}
-                  </span>
-
-                  <h3 className="font-serif text-xl sm:text-2xl uppercase tracking-wide text-[#F8F4EC] font-light">
-                    {m.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-[#EFE7DA]/75 font-sans font-light max-w-2xl leading-relaxed mt-2">
-                    {m.description}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bottom CTA */}
-      <section className="py-24 px-6 sm:px-10 lg:px-14 text-center bg-[#EFE7DA]">
+      {/* Closing Story Section */}
+      <section className="py-24 lg:py-36 px-6 sm:px-10 lg:px-14 text-center bg-[#1C1C1C] text-[#F8F4EC]">
         <div className="max-w-2xl mx-auto space-y-6">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans block">
-            Begin With Us
-          </span>
-          <h2 className="font-serif text-4xl sm:text-5xl uppercase tracking-tight text-[#1C1C1C] font-light">
-            Your Story Deserves Haute Couture
-          </h2>
-          <p className="text-xs sm:text-sm text-[#555555] font-sans font-light leading-relaxed">
-            Schedule a private consultation at our Delhi NCR, Kolkata, or Pune studio.
-          </p>
-          <div className="pt-4">
-            <MagneticButton>
-              <Link href="/contact" className="btn-luxury-maroon">
-                Reserve A Consultation
-              </Link>
-            </MagneticButton>
-          </div>
+          <Reveal>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight font-light text-[#F8F4EC] leading-[1.15]">
+              {closing.heading}
+            </h2>
+            <div className="w-16 h-[1px] bg-[#B08D57] mx-auto mt-6" />
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="space-y-4 pt-2">
+              {closing.paragraphs.map((p, idx) => (
+                <p
+                  key={idx}
+                  className={
+                    p === 'But you will remember how it felt.'
+                      ? 'font-serif italic text-xl sm:text-2xl text-[#D4AF7A] font-light'
+                      : 'text-sm sm:text-base text-[#EFE7DA]/80 font-sans font-light leading-relaxed'
+                  }
+                >
+                  {p}
+                </p>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="pt-6">
+              <MagneticButton>
+                <Link href="/contact" className="btn-luxury-light">
+                  {closing.cta}
+                </Link>
+              </MagneticButton>
+            </div>
+          </Reveal>
         </div>
       </section>
     </div>

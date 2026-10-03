@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, Jost, Tiro_Devanagari_Hindi } from 'next/font/google';
+// @ts-ignore -- Next.js processes this global stylesheet at build time.
 import './globals.css';
 import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';
@@ -33,14 +34,14 @@ const tiroHindi = Tiro_Devanagari_Hindi({
 export const metadata: Metadata = {
   title: 'Mangalgatha | Luxury Indian Wedding Planner | Delhi, Udaipur & Global',
   description:
-    'Mangalgatha is India’s premier luxury wedding company crafting timeless royal celebrations, palatial destination weddings, and couture experiences across Delhi, Rajasthan, Goa, and Europe.',
+    'Mangalgatha is India’s premier luxury wedding company crafting timeless celebrations, destination weddings, and couture experiences across Delhi, Rajasthan, Goa, and Mussoorie.',
   keywords: [
     'luxury indian wedding planner',
     'destination wedding planner delhi',
     'udaipur palace wedding planner',
     'royal rajasthan wedding',
     'mangalgatha',
-    'bespoke wedding decorator india'
+    'best wedding decorator india'
   ],
   authors: [{ name: 'Mangalgatha' }],
   metadataBase: new URL(process.env.APP_URL || 'https://mangalgatha.com'),

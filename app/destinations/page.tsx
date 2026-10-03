@@ -20,7 +20,7 @@ export default function DestinationsPage() {
         <div className="max-w-[1520px] mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans font-medium">
-              Geographies of Reverence
+              Popular wedding destinations  
             </span>
             <div className="w-12 h-[1px] bg-[#B08D57]" />
           </div>
@@ -28,8 +28,8 @@ export default function DestinationsPage() {
           <div className="max-w-5xl">
             <SplitTextReveal
               lines={[
-                'PALATIAL CITADELS AND',
-                'SECLUDED COASTAL SANCTUARIES.'
+                'PALACES, PRIVATE SHORES AND',
+                'PLACES WORTH GATHERING FOR.'
               ]}
               tag="h1"
               lineClassName="font-serif text-4xl sm:text-6xl lg:text-7xl font-light uppercase tracking-tight text-[#1C1C1C] leading-[1.08]"
@@ -37,8 +37,7 @@ export default function DestinationsPage() {
           </div>
 
           <p className="mt-8 font-serif italic text-xl sm:text-2xl text-[#5C1A1B] max-w-2xl font-light">
-            We command vetted palace protocols, private island buyouts, and global logistical mastery across India and beyond.
-          </p>
+            From storied palaces and secluded shores to extraordinary retreats across India and beyond, we curate destinations where the setting becomes part of the celebration — and every moment feels beautifully far from ordinary.          </p>
         </div>
       </section>
 

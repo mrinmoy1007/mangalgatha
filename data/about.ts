@@ -6,40 +6,34 @@ export interface TeamMember {
   image: string;
 }
 
-export interface Milestone {
-  year: string;
-  title: string;
-  description: string;
-}
-
 export const aboutData = {
   founder: {
-    name: 'Radhika Suryavanshi & Vikramaditya Rathore',
-    title: 'Founders & Creative Directors',
-    story: 'Mangalgatha was founded in 2014 out of an unyielding reverence for India’s grand ceremonial heritage and an insistence on couture minimalism. Having witnessed weddings drown in synthetic props and disorganized commotion, Radhika (a spatial architect trained in Milan) and Vikramaditya (a former diplomatic attaché with royal heritage roots in Mewar) united to establish a company where age-old Vedic sanctity merges seamlessly with high-fashion restraint.',
-    quote: 'We do not sell stages or timelines; we shepherd sacred milestones into enduring folklore.',
+    name: 'THE MOST BEAUTIFUL WEDDINGS ARE THE ONES THAT FEEL LIKE YOU',
+    title: 'We believe a wedding should never feel like a copy of someone else\'s celebration.',
+    story: 'It should carry your mother\'s traditions, your father\'s stories, your grandmother\'s blessings, your shared little rituals, your favourite flowers, your favourite people — and the magic that belongs only to the two of you.',
+    quote: "At Mangalgatha, we don't begin with a template.\n\nWe begin with you.",
     portrait: '/images/Untitled design 6.png'
   },
   philosophy: [
     {
       number: '01',
-      title: 'Sacred Authenticity',
-      desc: 'Every wedding honors the spiritual soul of Vedic traditions without performative ostentation.'
+      title: 'LISTEN',
+      desc: 'WE BEGIN WITH YOUR STORY : Your personalities. Your families. Your traditions. Your dreams. The things you love — and the things you never want your wedding to feel like.'
     },
     {
       number: '02',
-      title: 'Couture Restraint',
-      desc: 'True luxury whispers. We celebrate architectural space, noble materials, natural candlelight, and pristine botanical compositions.'
+      title: 'IMAGINE',
+      desc: 'THEN WE CREATE THE WORLD AROUND IT : From the visual language and décor to entertainment, culinary experiences and guest moments, every element is thoughtfully imagined around your story.'
     },
     {
       number: '03',
-      title: 'Flawless Sanctuary',
-      desc: 'The bride, groom, and their families are never treated as event hosts—they are guests of honor in their own love story.'
+      title: 'CURATE',
+      desc: 'EVERY DETAIL HAS A PURPOSE : We bring together trusted creative partners, artists, artisans and specialists to create a celebration that feels considered from beginning to end.'
     },
     {
       number: '04',
-      title: 'Bespoke Provenance',
-      desc: 'We never duplicate a single mandap, carpet, or sensory narrative. Each wedding is custom forged and retired thereafter.'
+      title: 'CELEBRATE',
+      desc: 'YOU ARRIVE. WE TAKE IT FROM HERE : While you celebrate with the people who matter most, we make sure everything behind the scenes comes together beautifully.'
     }
   ],
   team: [
@@ -72,31 +66,16 @@ export const aboutData = {
       image: '/images/Untitled design 40.png'
     }
   ],
-  milestones: [
-    {
-      year: '2014',
-      title: 'Inception in Delhi',
-      description: 'Mangalgatha opens its private studio doors in Chhatarpur, planning its first five bespoke heritage weddings.'
-    },
-    {
-      year: '2017',
-      title: 'The Mewar Royal Commission',
-      description: 'Entrusted with orchestrating a three-day celebration across Lake Pichola for 700 guests, establishing a benchmark for palace logistics.'
-    },
-    {
-      year: '2020',
-      title: 'Expansion to Mumbai & Jaipur',
-      description: 'Inauguration of the South Mumbai studio in Colaba and dedicated palace heritage operations team in Jaipur.'
-    },
-    {
-      year: '2023',
-      title: 'European & Global Destinations',
-      description: 'Expanded full-scale production to Lake Como, Tuscany, the French Riviera, and the Arabian Gulf.'
-    },
-    {
-      year: '2026',
-      title: 'A Decade of Auspicious Stories',
-      description: 'Over 220 singular wedding stories crafted with zero compromise, setting the global gold standard for Indian wedding haute couture.'
-    }
-  ]
+  closing: {
+    heading: 'Your Love Story Is One of One. Your Wedding Should Be Too.',
+    paragraphs: [
+      'No two couples are the same.',
+      'So no two Mangalgatha celebrations should be either.',
+      'We create weddings that carry your traditions, your personality, your people and your dreams — brought together through thoughtful planning, beautiful design and meaningful experiences.',
+      'Because years from now, you may not remember every flower or every table setting.',
+      'But you will remember how it felt.',
+      'And that is what we are here to create.'
+    ],
+    cta: "Let's Begin Your Story"
+  }
 };

@@ -61,18 +61,18 @@ export default function RotatingBadge({
           className="uppercase"
         >
           <textPath href="#badgeCirclePath" startOffset="0%">
-            ✦ MANGALGATHA ✦ LUXURY PLANNERS ✦
+            ✦ MANGALGATHA ✦ LUXURY WEDDING PLANNERS ✦
           </textPath>
         </text>
       </svg>
 
-      {/* Central Monogram M in center */}
+      {/* Central Monogram मंगल गाथा in center */}
       <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
         <span
           className="font-serif text-lg font-light tracking-widest"
           style={{ color: subColor }}
         >
-          M
+          मंगल
         </span>
         <span className="font-hindi text-[8px] text-[#B08D57] -mt-1">
           गाथा
