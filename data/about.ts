@@ -69,9 +69,9 @@ export const aboutData = {
   closing: {
     heading: 'Your Love Story Is One of One. Your Wedding Should Be Too.',
     paragraphs: [
-      'No two couples are the same.',
-      'So no two Mangalgatha celebrations should be either.',
-      'We create weddings that carry your traditions, your personality, your people and your dreams — brought together through thoughtful planning, beautiful design and meaningful experiences.',
+      'No two couples are the same,',
+      'So no two Mangalgatha celebrations should be either,',
+      'We create weddings that carry your traditions, your personality, your people and your dreams — brought together through thoughtful planning, beautiful design and meaningful experiences,',
       'Because years from now, you may not remember every flower or every table setting.',
       'But you will remember how it felt.',
       'And that is what we are here to create.'

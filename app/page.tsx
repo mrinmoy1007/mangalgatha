@@ -3,7 +3,7 @@ import IntroSection from '@/components/sections/IntroSection';
 import ServicesSliderSection from '@/components/sections/ServicesSliderSection';
 import SplitCTASection from '@/components/sections/SplitCTASection';
 import MarqueeAndSignatureSection from '@/components/sections/MarqueeAndSignatureSection';
-import FeaturedStoriesSection from '@/components/sections/FeaturedStoriesSection';
+import ImageMarqueeSection from '@/components/sections/ImageMarqueeSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import InstagramSection from '@/components/sections/InstagramSection';
 import LocationsSection from '@/components/sections/LocationsSection';
@@ -26,8 +26,8 @@ export default function HomePage() {
       {/* 5. Infinite Marquee + Signature Experience */}
       <MarqueeAndSignatureSection />
 
-      {/* 6. Featured Wedding Stories */}
-      <FeaturedStoriesSection />
+      {/* 6. Scrolling Image Gallery */}
+      <ImageMarqueeSection />
 
       {/* 7. Testimonials */}
       <TestimonialsSection />

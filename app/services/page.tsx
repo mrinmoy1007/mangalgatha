@@ -20,7 +20,7 @@ export default function ServicesPage() {
         <div className="max-w-[1520px] mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans font-medium">
-              Our Disciplines
+              Our services
             </span>
             <div className="w-12 h-[1px] bg-[#B08D57]" />
           </div>
@@ -28,16 +28,15 @@ export default function ServicesPage() {
           <div className="max-w-5xl">
             <SplitTextReveal
               lines={[
-                'HAUTE ARCHITECTURE OF',
-                'CELEBRATION AND REVERENCE.'
-              ]}
+                'THE ART OF ROYAL CELEBRATION & TIMELESS TRADITION.',
+                  ]}
               tag="h1"
               lineClassName="font-serif text-4xl sm:text-6xl lg:text-7xl font-light uppercase tracking-tight text-[#1C1C1C] leading-[1.08]"
             />
           </div>
 
           <p className="mt-8 font-serif italic text-xl sm:text-2xl text-[#5C1A1B] max-w-2xl font-light">
-            Six disciplined practices calibrated to transform momentous unions into timeless royal art.
+           Every celebration is uniquely yours. Our bespoke services bring together thoughtful planning, artistry, and detail to create moments that become part of your story.
           </p>
         </div>
       </section>
@@ -80,9 +79,9 @@ export default function ServicesPage() {
                   className={`lg:col-span-6 space-y-6 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}
                 >
                   <Reveal delay={0.1}>
-                    <span className="font-serif text-5xl sm:text-6xl lg:text-7xl font-light text-[#B08D57] block">
+                    {/* <span className="font-serif text-5xl sm:text-6xl lg:text-7xl font-light text-[#B08D57] block">
                       {svc.number}
-                    </span>
+                    </span> */}
                     <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl uppercase tracking-wide font-light text-[#1C1C1C] mt-2">
                       {svc.title}
                     </h2>
@@ -117,7 +116,7 @@ export default function ServicesPage() {
                           href={`/services/${svc.slug}`}
                           className="btn-luxury"
                         >
-                          View Full Discipline
+                          Explore Our Expertise
                         </Link>
                       </MagneticButton>
                     </div>
@@ -132,9 +131,7 @@ export default function ServicesPage() {
       {/* Bottom CTA */}
       <section className="py-24 px-6 sm:px-10 lg:px-14 text-center bg-[#5C1A1B] text-[#F8F4EC] border-t border-[#B08D57]/30">
         <div className="max-w-2xl mx-auto space-y-6">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF7A] font-sans block">
-            Bespoke Orchestration
-          </span>
+
           <h2 className="font-serif text-4xl sm:text-5xl uppercase tracking-tight font-light text-[#F8F4EC]">
             Craft Your Celebration With Our Curators
           </h2>
@@ -144,7 +141,7 @@ export default function ServicesPage() {
           <div className="pt-4">
             <MagneticButton>
               <Link href="/contact" className="btn-luxury-light">
-                Consult With A Specialist
+                Consult with our Planner
               </Link>
             </MagneticButton>
           </div>

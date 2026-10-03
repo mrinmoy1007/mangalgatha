@@ -37,6 +37,11 @@ export interface Service {
   process: { step: string; title: string; desc: string }[];
   gallery: string[];
   extended?: ServiceExtendedContent;
+  homeSlider?: {
+    tagline: string;
+    paragraphs: string[];
+    cta: string;
+  };
 }
 
 export const servicesData: Service[] = [
@@ -103,6 +108,15 @@ export const servicesData: Service[] = [
         ],
         ctaText: 'Plan Your Wedding With Mangalgatha'
       }
+    },
+    homeSlider: {
+      tagline: 'From the First Idea to the Last Dance, We Take Care of It All.',
+      paragraphs: [
+        "A beautiful wedding doesn't happen by chance. Behind every effortless celebration is a thousand thoughtful decisions, perfectly timed moments, and a team quietly making it all come together.",
+        'At Mangalgatha, we take your wedding from vision to celebration — planning every detail, coordinating every moving part, and creating an experience that feels beautifully, unmistakably yours.',
+        'From intimate family ceremonies to grand destination weddings, we plan the details so you can live the moments.'
+      ],
+      cta: 'Explore Full Wedding Planning →'
     }
   },
   {
@@ -123,7 +137,7 @@ export const servicesData: Service[] = [
     ],
     process: [
       { step: '01', title: 'Global Venue Scouting', desc: 'Curating vetted heritage estates, private sandbars, and fortress cloisters.' },
-      { step: '02', title: 'Air & Ground Fleet Protocol', desc: 'Seamless chartering, transfers, bespoke luggage tagging, and royal welcomes.' },
+      { step: '02', title: 'Air & Ground Fleet Protocol', desc: 'Seamless chartering, transfers, luggage tagging, and royal welcomes.' },
       { step: '03', title: 'Cross-Border Production', desc: 'Exporting master chefs, custom floral structures, and Indian artisans worldwide.' },
       { step: '04', title: 'Destination Concierge', desc: '24/7 bilingual liaison managing room drops, styling emergencies, and excursions.' }
     ],
@@ -132,7 +146,17 @@ export const servicesData: Service[] = [
       '/images/Untitled design 18.png',
       '/images/Untitled design 32.png',
       '/images/Untitled design 11.png'
-    ]
+    ],
+    homeSlider: {
+      tagline: 'Take Your Love Story Somewhere Beautiful.',
+      paragraphs: [
+        'Some weddings are meant to be celebrated a little farther from home.',
+        'A palace glowing beneath the evening sky. A celebration surrounded by mountains. A seaside ceremony with the people you love most. A weekend where every guest becomes part of the story.',
+        'Mangalgatha creates luxury destination weddings where the place, the people and the celebration come together as one unforgettable experience.',
+        'From the first journey to the final farewell, we make the destination part of your story.'
+      ],
+      cta: 'Discover Destination Weddings →'
+    }
   },
   {
     id: '03',
@@ -210,6 +234,15 @@ export const servicesData: Service[] = [
         ],
         ctaText: 'Create Your Wedding Design'
       }
+    },
+    homeSlider: {
+      tagline: "We Don't Just Decorate Spaces. We Create Worlds for Your Story.",
+      paragraphs: [
+        'A beautiful wedding begins with a feeling.',
+        'A flower chosen for its meaning. A colour that reminds you of home. A mandap that feels like it belongs to another world. A table that makes your guests pause before they sit down.',
+        'At Mangalgatha, we turn your story into immersive wedding décor and event design — thoughtfully bringing together florals, textures, lighting, architecture, colour and detail to create celebrations that feel extraordinary and entirely yours.'
+      ],
+      cta: 'Explore Decor & Event Design →'
     }
   },
   {
@@ -305,6 +338,16 @@ export const servicesData: Service[] = [
         paragraphs: [],
         ctaText: 'Plan Your Pre-Wedding Celebrations'
       }
+    },
+    homeSlider: {
+      tagline: 'The Celebrations Before the "I Do."',
+      paragraphs: [
+        'Before the vows, there is laughter.',
+        'Before the wedding, there is colour, music, dancing, mischief and a whole lot of love.',
+        'From sunlit Haldi ceremonies and intimate Mehendi celebrations to high-energy Sangeet nights, Mangalgatha creates pre-wedding experiences that feel every bit as special as the wedding itself.',
+        'Different moods. Different stories. One unforgettable celebration.'
+      ],
+      cta: 'Explore Pre-Wedding Celebrations →'
     }
   },
   {
@@ -334,7 +377,16 @@ export const servicesData: Service[] = [
       '/images/Untitled design 33.png',
       '/images/Untitled design 35.png',
       '/images/car flower decore.png'
-    ]
+    ],
+    homeSlider: {
+      tagline: 'The Perfect Setting. The Warmest Welcome.',
+      paragraphs: [
+        'A beautiful wedding begins with the right place — but an unforgettable wedding is created through how people experience it.',
+        'From finding the setting that feels right for your celebration to ensuring every guest feels welcomed, comfortable and cared for, Mangalgatha manages the details behind the experience.',
+        'Beautifully chosen. Thoughtfully hosted. Seamlessly managed.'
+      ],
+      cta: 'Explore Venue & Hospitality →'
+    }
   },
   {
     id: '06',
@@ -439,6 +491,15 @@ export const servicesData: Service[] = [
         subheading: "Let's create both.",
         paragraphs: ["Tell us your story, your style and the celebration you're imagining. We'll help bring together the people who can capture it beautifully — and the ones who can make it unforgettable."]
       }
+    },
+    homeSlider: {
+      tagline: "The Moments You'll Remember. The Moments They'll Talk About.",
+      paragraphs: [
+        'Some moments are meant to be photographed.',
+        'Some are meant to be danced through, sung along to, and remembered long after the music stops.',
+        'At Mangalgatha, we curate photographers, filmmakers, artists and entertainment experiences that bring your celebration to life — capturing the fleeting glances, loud laughter, happy tears and unforgettable energy that make your wedding uniquely yours.'
+      ],
+      cta: 'Explore Photography & Entertainment →'
     }
   }
 ];

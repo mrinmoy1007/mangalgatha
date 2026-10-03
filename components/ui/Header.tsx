@@ -132,9 +132,9 @@ export default function Header() {
                         <span className="font-sans text-[11px] uppercase tracking-[0.16em] group-hover:text-[#5C1A1B] text-[#1C1C1C] transition-colors">
                           {svc.title}
                         </span>
-                        <span className="font-serif text-[11px] text-[#B08D57] group-hover:translate-x-1 transition-transform">
+                        {/* <span className="font-serif text-[11px] text-[#B08D57] group-hover:translate-x-1 transition-transform">
                           {svc.number}
-                        </span>
+                        </span> */}
                       </Link>
                     ))}
                   </div>
@@ -156,7 +156,7 @@ export default function Header() {
                 pathname.startsWith('/stories') ? 'text-[#B08D57]' : ''
               }`}
             >
-              Stories
+              Gallery
             </Link>
           </nav>
 
@@ -294,7 +294,7 @@ export default function Header() {
               { href: '/', label: 'Home' },
               { href: '/about', label: 'About Us' },
               { href: '/services', label: 'Our Services' },
-              { href: '/stories', label: 'Wedding Stories' },
+              { href: '/stories', label: 'Gallery' },
               { href: '/destinations', label: 'Wedding Destinations' },
               { href: '/journal', label: 'Journal & Stories' },
               { href: '/contact', label: 'Book Consultation' },

@@ -68,6 +68,7 @@ export default function HeroSection() {
           width: '100vw',
           height: '100vh',
           maxWidth: '100vw',
+          maxHeight: '100vh',
           borderRadius: 0,
           scale: 1.05,
           ease: 'power2.inOut',
@@ -116,10 +117,10 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-screen h-screen flex flex-col justify-between items-center bg-[#1C1C1C] text-[#F8F4EC] overflow-hidden pt-28 pb-10"
+      className="relative w-full min-h-screen h-screen flex flex-col justify-between items-center bg-[#5C1A1B] text-[#F8F4EC] overflow-hidden pt-28 pb-10"
     >
       {/* Background radial gradient to give cinematic luxury depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1C1C1C] via-[#2A0A0B]/40 to-[#1C1C1C] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#5C1A1B] via-[#5C1A1B]/40 to-[#5C1A1B] pointer-events-none z-0" />
 
       {/* Main Collage Layout */}
       <div className="relative z-10 w-full max-w-[1520px] mx-auto px-4 sm:px-8 flex-1 flex items-center justify-center">
@@ -247,7 +248,7 @@ export default function HeroSection() {
               href="/contact"
               className="btn-luxury-light text-[10px]"
             >
-              Contact Studio
+              Contact Us
             </Link>
           </MagneticButton>
         </div>

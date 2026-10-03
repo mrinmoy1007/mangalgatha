@@ -115,16 +115,9 @@ export default function Preloader() {
             />
           </svg>
 
-          {/* Central Luxury Monogram "M" */}
+          {/* Central Luxury Monogram */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <svg
-              className="w-14 h-14 text-[#5C1A1B]"
-              viewBox="0 0 60 60"
-              fill="currentColor"
-            >
-              <path d="M 12 48 L 12 12 L 18 12 L 30 36 L 42 12 L 48 12 L 48 48 L 42 48 L 42 22 L 32 42 L 28 42 L 18 22 L 18 48 Z" />
-            </svg>
-            <span className="font-hindi text-[11px] text-[#B08D57] tracking-widest mt-1">
+            <span className="font-hindi text-[11px] text-[#B08D57] tracking-widest">
               मंगलगाथा
             </span>
           </div>

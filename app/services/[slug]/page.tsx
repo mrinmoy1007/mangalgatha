@@ -57,9 +57,9 @@ export default async function ServiceDetailPage({
 
         <div className="relative z-10 max-w-[1520px] mx-auto w-full text-[#F8F4EC]">
           <div className="flex items-center gap-3 mb-4">
-            <span className="font-serif text-3xl text-[#D4AF7A] font-light">
+            {/* <span className="font-serif text-3xl text-[#D4AF7A] font-light">
               {service.number}
-            </span>
+            </span> */}
             <div className="w-12 h-[1px] bg-[#B08D57]" />
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF7A] font-sans">
               services
@@ -148,11 +148,11 @@ export default async function ServiceDetailPage({
                       key={idx}
                       className="border border-[#B08D57]/40 bg-[#F8F4EC] p-8 space-y-3 hover:border-[#5C1A1B] transition-colors"
                     >
-                      {item.number && (
+                      {/* {item.number && (
                         <span className="font-serif text-3xl text-[#B08D57] font-light block">
                           {item.number}
                         </span>
-                      )}
+                      )} */}
                       <h3 className="font-serif text-lg uppercase tracking-wider text-[#1C1C1C] font-light">
                         {item.title}
                       </h3>
@@ -408,7 +408,7 @@ export default async function ServiceDetailPage({
               </h2>
             </div>
             <span className="text-xs font-sans tracking-widest uppercase text-[#5C1A1B]">
-              Bespoke commissions across India
+             Exquisite Celebrations Across India
             </span>
           </div>
 
@@ -470,7 +470,7 @@ export default async function ServiceDetailPage({
               href="/services"
               className="text-[11px] uppercase tracking-[0.22em] text-[#D4AF7A] hover:text-[#F8F4EC] transition-colors"
             >
-              &larr; Return to All Disciplines
+              &larr; Return to All Services
             </Link>
           </div>
         </div>

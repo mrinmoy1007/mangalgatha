@@ -6,7 +6,6 @@ import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
 import Preloader from '@/components/animations/Preloader';
-import CustomCursor from '@/components/animations/CustomCursor';
 import SmoothScroll from '@/components/animations/SmoothScroll';
 
 const cormorant = Cormorant_Garamond({
@@ -84,9 +83,9 @@ const JSON_LD_SCRIPT = JSON.stringify({
   telephone: '+911149208000',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'The Dhan Mill, 100 Feet Road, Chhatarpur',
-    addressLocality: 'New Delhi',
-    addressRegion: 'Delhi',
+    streetAddress: 'Sector-65',
+    addressLocality: 'Delhi-NCR',
+    addressRegion: 'Delhi-NCR',
     postalCode: '110074',
     addressCountry: 'IN',
   },
@@ -129,7 +128,6 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-[#F8F4EC] text-[#1C1C1C] min-h-screen">
         <SmoothScroll>
           <Preloader />
-          <CustomCursor />
           <Header />
           {children}
           <Footer />

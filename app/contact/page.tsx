@@ -18,7 +18,7 @@ export default function ContactPage() {
         <div className="max-w-[1520px] mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans font-medium">
-              Private Liaison
+              Begin Your Celebration
             </span>
             <div className="w-12 h-[1px] bg-[#B08D57]" />
           </div>
@@ -35,7 +35,7 @@ export default function ContactPage() {
           </div>
 
           <p className="mt-8 font-serif italic text-xl sm:text-2xl text-[#5C1A1B] max-w-2xl font-light">
-            We welcome couples and families by appointment at our studios in Delhi NCR, Kolkata, and Pune.
+            We welcome couples and families by appointment at our office Across India.
           </p>
         </div>
       </section>
@@ -61,7 +61,7 @@ export default function ContactPage() {
                   <div key={st.city} className="border-b border-[#B08D57]/20 pb-4 last:border-b-0 last:pb-0 space-y-1">
                     <div className="flex items-center justify-between">
                       <h4 className="font-serif text-lg uppercase tracking-wider text-[#1C1C1C] font-light">
-                        {st.city} Studio
+                        {st.city} Office
                       </h4>
                       <span className="text-[9px] uppercase tracking-wider text-[#8E7145] font-sans">
                         {st.badge}
@@ -116,13 +116,13 @@ export default function ContactPage() {
                   Delhi NCR  Map
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-[#EFE7DA]/70 font-sans">
-                  The Dhan Mill, Chhatarpur
+                  Sector-65
                 </span>
               </div>
               <div className="relative w-full h-64 sm:h-72 bg-[#EFE7DA]">
                 <iframe
                   title="Mangalgatha Delhi Studio Map"
-                  src="https://maps.google.com/maps?q=The+Dhan+Mill+Chhatarpur+New+Delhi&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12703.777030732695!2d77.05954469701048!3d28.403180487421295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2266ebb9a9b9%3A0xee646ae45de38202!2sSector%2065%2C%20Gurugram%2C%20Haryana!5e1!3m2!1sen!2sin!4v1791058736511!5m2!1sen!2sin"
                   className="w-full h-full border-0 filter contrast-125 saturate-50"
                   loading="lazy"
                   referrerPolicy="no-referrer"

@@ -129,9 +129,9 @@ export default function AboutPage() {
             {philosophy.map((item, index) => (
               <Reveal key={item.number} delay={index * 0.1}>
                 <div className="border border-[#B08D57]/40 bg-[#F8F4EC] p-8 h-full space-y-4 hover:border-[#5C1A1B] transition-colors">
-                  <span className="font-serif text-4xl text-[#B08D57] font-light block">
+                  {/* <span className="font-serif text-4xl text-[#B08D57] font-light block">
                     {item.number}
-                  </span>
+                  </span> */}
                   <h3 className="font-serif text-2xl uppercase tracking-wider text-[#1C1C1C] font-light">
                     {item.title}
                   </h3>
@@ -146,7 +146,7 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership & Master Team Grid */}
-      <section className="py-24 lg:py-36 px-6 sm:px-10 lg:px-14 border-b border-[#B08D57]/20">
+      {/* <section className="py-24 lg:py-36 px-6 sm:px-10 lg:px-14 border-b border-[#B08D57]/20">
         <div className="max-w-[1520px] mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-[#B08D57]/30 pb-8 mb-16 gap-6">
             <div>
@@ -200,7 +200,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Closing Story Section */}
       <section className="py-24 lg:py-36 px-6 sm:px-10 lg:px-14 text-center bg-[#1C1C1C] text-[#F8F4EC]">
@@ -225,6 +225,8 @@ export default function AboutPage() {
                 >
                   {p}
                 </p>
+                
+                
               ))}
             </div>
           </Reveal>

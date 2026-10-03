@@ -99,43 +99,64 @@ export default function ServicesSliderSection() {
             <SwiperSlide key={service.id}>
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center py-4">
                 {/* Left Content Column (7 cols) */}
-                <div className="lg:col-span-7 space-y-8">
-                  {/* Gold Number */}
-                  {/* <div className="font-serif text-6xl sm:text-7xl lg:text-8xl font-light text-[#B08D57]/80 leading-none">
-                    {service.number}
-                  </div> */}
-
+                <div className="lg:col-span-7 space-y-6">
                   {/* Service Title */}
                   <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl uppercase tracking-wide text-[#F8F4EC] font-light">
                     {service.title}
                   </h3>
 
-                  {/* Two-line Description */}
-                  <p className="text-sm sm:text-base text-[#EFE7DA]/80 leading-relaxed font-sans font-light max-w-xl">
-                    {service.shortDesc}
-                  </p>
+                  {service.homeSlider ? (
+                    <>
+                      {/* Tagline */}
+                      <p className="font-serif italic text-lg sm:text-xl text-[#D4AF7A] leading-snug max-w-xl">
+                        {service.homeSlider.tagline}
+                      </p>
 
-                  {/* Key Highlights list */}
-                  <ul className="space-y-2 pt-2 border-t border-[#B08D57]/20 max-w-lg">
-                    {service.features.slice(0, 3).map((feat, idx) => (
-                      <li key={idx} className="text-xs uppercase tracking-[0.18em] text-[#D4AF7A] flex items-center gap-3">
-                        <span className="w-1.5 h-1.5 bg-[#B08D57] rotate-45 inline-block" />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
+                      {/* Narrative Paragraphs */}
+                      <div className="space-y-3 max-w-xl">
+                        {service.homeSlider.paragraphs.map((p, idx) => (
+                          <p key={idx} className="text-sm sm:text-base text-[#EFE7DA]/80 leading-relaxed font-sans font-light">
+                            {p}
+                          </p>
+                        ))}
+                      </div>
 
-                  {/* Explore Button */}
-                  <div className="pt-4">
-                    <MagneticButton>
-                      <Link
-                        href={`/services/${service.slug}`}
-                        className="btn-luxury-light"
-                      >
-                        Explore {service.title} →
-                      </Link>
-                    </MagneticButton>
-                  </div>
+                      {/* Explore Button */}
+                      <div className="pt-4">
+                        <MagneticButton>
+                          <Link href={`/services/${service.slug}`} className="btn-luxury-light">
+                            {service.homeSlider.cta}
+                          </Link>
+                        </MagneticButton>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      {/* Two-line Description */}
+                      <p className="text-sm sm:text-base text-[#EFE7DA]/80 leading-relaxed font-sans font-light max-w-xl">
+                        {service.shortDesc}
+                      </p>
+
+                      {/* Key Highlights list */}
+                      <ul className="space-y-2 pt-2 border-t border-[#B08D57]/20 max-w-lg">
+                        {service.features.slice(0, 3).map((feat, idx) => (
+                          <li key={idx} className="text-xs uppercase tracking-[0.18em] text-[#D4AF7A] flex items-center gap-3">
+                            <span className="w-1.5 h-1.5 bg-[#B08D57] rotate-45 inline-block" />
+                            <span>{feat}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Explore Button */}
+                      <div className="pt-4">
+                        <MagneticButton>
+                          <Link href={`/services/${service.slug}`} className="btn-luxury-light">
+                            Explore {service.title} →
+                          </Link>
+                        </MagneticButton>
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 {/* Right Column: Tall Image with Clip-Path Reveal (5 cols) */}

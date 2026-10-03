@@ -96,8 +96,8 @@ export default function SplitCTASection() {
 
             <Reveal delay={0.25}>
               <p className="font-serif italic text-lg sm:text-xl text-[#5C1A1B] max-w-md mx-auto leading-relaxed">
-                Accepting a strictly limited cohort of fifteen bespoke celebrations annually to preserve uncompromising attention.
-              </p>
+               Curating a select number of celebrations each year, ensuring every detail receives our undivided attention.
+               </p>
             </Reveal>
 
             <Reveal delay={0.35}>

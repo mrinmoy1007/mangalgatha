@@ -1,18 +1,55 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import { weddingStoriesData } from '@/data/stories';
+import fs from 'fs';
+import path from 'path';
 import SplitTextReveal from '@/components/animations/SplitTextReveal';
 import Reveal from '@/components/animations/Reveal';
-import MagneticButton from '@/components/animations/MagneticButton';
+import GalleryLightbox from '@/components/ui/GalleryLightbox';
 
 export const metadata: Metadata = {
-  title: 'Wedding Stories & Chronicles | Mangalgatha Luxury Wedding Planners',
+  title: 'Gallery | Mangalgatha Luxury Wedding Planners',
   description:
-    'Step inside the real royal celebrations orchestrated by Mangalgatha across Udaipur, Jodhpur, Jaipur, Goa, and Mussoorie.',
+    'A visual archive of the celebrations, details and destinations brought to life by Mangalgatha.',
 };
 
+const IMAGE_EXTENSIONS = new Set(['.png', '.jpg', '.jpeg', '.webp']);
+const EXCLUDED_PREFIXES = ['mglogo'];
+
+function filenameToCaption(filename: string): string {
+  const base = filename.replace(/\.[^.]+$/, '');
+  if (/^untitled design/i.test(base)) {
+    return 'Mangalgatha Celebration';
+  }
+  return base
+    .replace(/[-_]+/g, ' ')
+    .replace(/decore/gi, 'décor')
+    .trim()
+    .split(/\s+/)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+function getGalleryImages() {
+  const imagesDir = path.join(process.cwd(), 'public', 'images');
+  const files = fs.readdirSync(imagesDir);
+
+  return files
+    .filter((file) => {
+      const ext = path.extname(file).toLowerCase();
+      if (!IMAGE_EXTENSIONS.has(ext)) return false;
+      const lower = file.toLowerCase();
+      return !EXCLUDED_PREFIXES.some((prefix) => lower.startsWith(prefix));
+    })
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }))
+    .map((file) => ({
+      url: `/images/${file}`,
+      caption: filenameToCaption(file),
+      aspect: '3/4',
+    }));
+}
+
 export default function StoriesPage() {
+  const galleryItems = getGalleryImages();
+
   return (
     <div className="pt-24 bg-[#F8F4EC] text-[#1C1C1C]">
       {/* Header Banner */}
@@ -20,7 +57,7 @@ export default function StoriesPage() {
         <div className="max-w-[1520px] mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans font-medium">
-              Real Auspicious Chronicles
+              Visual Archives
             </span>
             <div className="w-12 h-[1px] bg-[#B08D57]" />
           </div>
@@ -28,8 +65,8 @@ export default function StoriesPage() {
           <div className="max-w-5xl">
             <SplitTextReveal
               lines={[
-                'EVERY WEDDING IS A STORY.',
-                'HERE ARE SOME WE WROTE.'
+                'A GALLERY OF',
+                'AUSPICIOUS MOMENTS.'
               ]}
               tag="h1"
               lineClassName="font-serif text-4xl sm:text-6xl lg:text-7xl font-light uppercase tracking-tight text-[#1C1C1C] leading-[1.08]"
@@ -37,84 +74,17 @@ export default function StoriesPage() {
           </div>
 
           <p className="mt-8 font-serif italic text-xl sm:text-2xl text-[#5C1A1B] max-w-2xl font-light">
-            An intimate anthology of unions forged within centuries-old citadels, lakeside palaces, and secluded shores.
+            A curated look into the celebrations, details and destinations we&apos;ve brought to life.
           </p>
         </div>
       </section>
 
-      {/* Stories Archive Masonry Grid */}
+      {/* Full Image Gallery */}
       <section className="py-20 lg:py-32 px-6 sm:px-10 lg:px-14">
-        <div className="max-w-[1520px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {weddingStoriesData.map((story, idx) => (
-            <Reveal key={story.slug} delay={idx * 0.1}>
-              <Link
-                href={`/stories/${story.slug}`}
-                className="group block bg-[#EFE7DA]/50 border border-[#B08D57]/30 shadow-md hover:border-[#5C1A1B] transition-colors overflow-hidden"
-                data-cursor="view"
-                data-cursor-text="VIEW"
-              >
-                {/* Tall Image */}
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  <Image
-                    src={story.coverImage}
-                    alt={`${story.couple} — ${story.location}`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-[#5C1A1B]/10 group-hover:bg-transparent transition-colors duration-500" />
-                </div>
-
-                {/* Card Body */}
-                <div className="p-6 sm:p-8 space-y-3">
-                  <div className="flex items-center justify-between text-[9px] uppercase tracking-[0.25em] text-[#8E7145] font-sans">
-                    <span>{story.location}</span>
-                    <span>{story.date}</span>
-                  </div>
-
-                  <h2 className="font-serif text-2xl sm:text-3xl uppercase tracking-wide font-light text-[#1C1C1C] group-hover:text-[#5C1A1B] transition-colors">
-                    {story.couple}
-                  </h2>
-
-                  <p className="text-xs uppercase tracking-wider text-[#5C1A1B] font-sans">
-                    {story.venue} · {story.guestCount}
-                  </p>
-
-                  <p className="text-xs text-[#555555] font-sans font-light leading-relaxed pt-2 line-clamp-2">
-                    {story.excerpt}
-                  </p>
-
-                  <div className="pt-4 flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-[#5C1A1B] font-medium">
-                    <span>Read Chronicle</span>
-                    <span className="transform group-hover:translate-x-1.5 transition-transform">&rarr;</span>
-                  </div>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* Footer CTA */}
-      <section className="py-24 px-6 sm:px-10 lg:px-14 text-center bg-[#5C1A1B] text-[#F8F4EC] border-t border-[#B08D57]/30">
-        <div className="max-w-2xl mx-auto space-y-6">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF7A] font-sans block">
-            Your Auspicious Tale
-          </span>
-          <h2 className="font-serif text-4xl sm:text-5xl uppercase tracking-tight font-light text-[#F8F4EC]">
-            Ready to Write Your Wedding Story?
-          </h2>
-          <p className="text-xs sm:text-sm text-[#EFE7DA]/80 font-sans font-light leading-relaxed">
-            We accept fifteen unions per year. Inquire early to secure your auspicious dates.
-          </p>
-          <div className="pt-4">
-            <MagneticButton>
-              <Link href="/contact" className="btn-luxury-light">
-                Consult With Our Planners
-              </Link>
-            </MagneticButton>
-          </div>
+        <div className="max-w-[1520px] mx-auto">
+          <Reveal>
+            <GalleryLightbox items={galleryItems} />
+          </Reveal>
         </div>
       </section>
     </div>

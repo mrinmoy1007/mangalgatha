@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next';
 import { servicesData } from '@/data/services';
-import { weddingStoriesData } from '@/data/stories';
 import { journalArticlesData } from '@/data/journal';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -28,13 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const storyPages = weddingStoriesData.map((st) => ({
-    url: `${baseUrl}/stories/${st.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
-
   const journalPages = journalArticlesData.map((art) => ({
     url: `${baseUrl}/journal/${art.slug}`,
     lastModified: new Date(),
@@ -42,5 +34,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...servicePages, ...storyPages, ...journalPages];
+  return [...staticPages, ...servicePages, ...journalPages];
 }

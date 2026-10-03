@@ -30,7 +30,7 @@ export default function JournalPage() {
                 'DISCOURSES ON SCENOGRAPHY,',
                 'HERITAGE & SACRED REVERENCE.'
               ]}
-              tag="h1"
+              tag="h2"
               lineClassName="font-serif text-4xl sm:text-6xl lg:text-7xl font-light uppercase tracking-tight text-[#1C1C1C] leading-[1.08]"
             />
           </div>

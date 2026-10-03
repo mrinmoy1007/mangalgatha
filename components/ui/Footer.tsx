@@ -83,7 +83,7 @@ export default function Footer() {
                 { href: '/', label: 'Home' },
                 { href: '/about', label: 'About Us' },
                 { href: '/services', label: 'Services' },
-                { href: '/stories', label: 'Stories' },
+                { href: '/stories', label: 'Gallery' },
                 { href: '/destinations', label: 'Destinations' },
                 { href: '/journal', label: 'Journal' },
                 { href: '/contact', label: 'Contact' },
@@ -112,7 +112,7 @@ export default function Footer() {
                     href={`/services/${svc.slug}`}
                     className="text-[#EFE7DA]/80 hover:text-[#B08D57] transition-colors block py-0.5 line-clamp-1"
                   >
-                    {svc.number}. {svc.title}
+                    {svc.title}
                   </Link>
                 </li>
               ))}
@@ -122,7 +122,7 @@ export default function Footer() {
           {/* Col 4: Studio Locations (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
             <h4 className="text-[10px] uppercase tracking-[0.28em] text-[#B08D57] font-medium">
-              Our Studios
+              Find Us Across India
             </h4>
             <div className="space-y-6">
               {studiosData.map((st) => (

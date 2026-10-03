@@ -40,8 +40,8 @@ export default function EnquiryForm() {
       email: '',
       weddingDate: '',
       destination: 'Udaipur, Rajasthan',
-      guestCount: '250 – 500 Guests',
-      budget: '₹1.5 Cr – ₹3.0 Cr',
+      guestCount: '100 – 500 Guests',
+      budget: '₹20 lakh – ₹10.0 Cr',
       message: '',
     },
   });
@@ -171,14 +171,13 @@ export default function EnquiryForm() {
               className="w-full bg-white/70 border border-[#B08D57]/40 px-4 py-3 text-xs text-[#1C1C1C] font-sans focus:outline-hidden focus:border-[#5C1A1B] transition-colors"
             >
               <option value="Udaipur, Rajasthan">Udaipur, Rajasthan</option>
-              <option value="Jaipur, Rajasthan">Jaipur, Rajasthan</option>
+              <option value="Jaipur, Rajasthan">Jaipur, Rajasthan</option>S
               <option value="Jodhpur, Rajasthan">Jodhpur, Rajasthan</option>
-              <option value="Delhi NCR (The Dhan Mill / Chhatarpur)">Delhi NCR (Headquarters)</option>
+              <option value="Delhi NCR ">Delhi NCR </option>
               <option value="Goa (Beachside / Heritage Villa)">Goa (Beachside / Heritage Villa)</option>
               <option value="Mussoorie / Himalayas">Mussoorie / Himalayas</option>
-              <option value="Lake Como / Tuscany (Italy)">Lake Como / Tuscany (Italy)</option>
-              <option value="Dubai / Abu Dhabi (UAE)">Dubai / Abu Dhabi (UAE)</option>
-              <option value="Other Global / Bespoke Location">Other Global / Bespoke Location</option>
+              <option value="Kolkata / West Bengal ">Kolkata / West Bengal </option>
+              <option value="Other Global Locations">Other Global Locations </option>
             </select>
           </div>
 
@@ -207,8 +206,8 @@ export default function EnquiryForm() {
             {...register('budget')}
             className="w-full bg-white/70 border border-[#B08D57]/40 px-4 py-3 text-xs text-[#1C1C1C] font-sans focus:outline-hidden focus:border-[#5C1A1B] transition-colors"
           >
-            <option value="₹75 Lakhs – ₹1.5 Crore">₹75 Lakhs – ₹1.5 Crore</option>
-            <option value="₹1.5 Crore – ₹3.0 Crore">₹1.5 Crore – ₹3.0 Crore</option>
+            <option value="₹10 Lakhs – ₹1.0 Crore">₹10 Lakhs – ₹1.0 Crore</option>
+            <option value="₹1.0 Crore – ₹3.0 Crore">₹1.0 Crore – ₹3.0 Crore</option>
             <option value="₹3.0 Crore – ₹6.0 Crore">₹3.0 Crore – ₹6.0 Crore</option>
             <option value="₹6.0 Crore+ (Monumental Palatial Scope)">₹6.0 Crore+ (Monumental Palatial Scope)</option>
           </select>

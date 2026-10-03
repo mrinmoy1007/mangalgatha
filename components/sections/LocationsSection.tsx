@@ -61,16 +61,14 @@ export default function LocationsSection() {
           <Reveal delay={0.1}>
             <div className="flex items-center justify-center gap-3">
               <div className="w-12 h-[1px] bg-[#B08D57]" />
-              <span className="text-[10px] uppercase tracking-[0.35em] text-[#D4AF7A] font-sans font-medium">
-                Our Studios
-              </span>
+
               <div className="w-12 h-[1px] bg-[#B08D57]" />
             </div>
           </Reveal>
 
           <Reveal delay={0.2}>
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight font-light text-[#F8F4EC]">
-              Three Private Studios across India
+              Celebrations Across India
             </h2>
           </Reveal>
 
