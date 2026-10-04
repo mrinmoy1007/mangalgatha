@@ -69,7 +69,7 @@ export default function SplitCTASection() {
               data-cursor-text="MEWAR"
             >
               <Image
-                src="/images/Untitled design 40.png"
+                src="/images/DSC_7.JPG.png"
                 alt="Intricate bridal henna and wedding rituals"
                 fill
                 sizes="25vw"
@@ -129,7 +129,7 @@ export default function SplitCTASection() {
               data-cursor-text="PALACE"
             >
               <Image
-                src="/images/udaipur wedding.png"
+                src="/images/DSC_3.JPG.png"
                 alt="Candlelit luxury wedding banquet tablescape"
                 fill
                 sizes="25vw"

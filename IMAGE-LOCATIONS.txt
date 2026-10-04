@@ -1,0 +1,181 @@
+MANGALGATHA — IMAGE LOCATIONS REFERENCE
+=========================================
+Every image on the site lives in: public/images/  (videos in public/videos/)
+To swap an image: replace the file in public/images/ keeping the SAME filename,
+  OR edit the path string at the file:line listed below to point to a new filename.
+
+All paths below start with /images/ which maps to the public/images/ folder.
+
+
+1. LOGOS & BRAND (hardcoded directly in components, not in data files)
+------------------------------------------------------------------------
+  /images/mglogo.png            - dark/colour logo
+    used in: components/ui/Header.tsx:167  (mobile menu logo)
+    used in: components/ui/Header.tsx:280  (desktop header logo)
+    used in: components/animations/Preloader.tsx:129  (loading screen logo)
+
+  /images/mglogow.png           - white logo (for dark backgrounds)
+    used in: components/ui/Footer.tsx:61  (footer logo)
+
+
+2. HOMEPAGE (app/page.tsx — sections in order)
+------------------------------------------------------------------------
+  HeroSection (components/sections/HeroSection.tsx)
+    /images/Untitled design 14.png   - line 135  (top-left collage photo)
+    /images/Untitled design 38.png   - line 149  (bottom-left collage photo)
+    /images/Untitled design 20.png   - line 196  (top-right collage photo)
+    /images/Untitled design.png      - line 209  (bottom-right collage photo)
+    /videos/hero-vid.mp4              - line 175  (center autoplay video)
+    /images/hero-poster.jpg           - line 172  (poster/fallback frame for the video)
+
+  IntroSection (components/sections/IntroSection.tsx)
+    /images/Untitled design 40.png   - line 47
+
+  ServicesSliderSection (components/sections/ServicesSliderSection.tsx)
+    /images/Untitled design 30.png   - line 25  (background atmosphere image behind the slider)
+    + each slide also shows that service's heroImage — see section 4 (SERVICES) below
+
+  SplitCTASection (components/sections/SplitCTASection.tsx)
+    /images/Untitled design 40.png   - line 72
+    /images/udaipur wedding.png      - line 132
+
+  MarqueeAndSignatureSection (components/sections/MarqueeAndSignatureSection.tsx)
+    /images/Untitled design 10.png   - line 117  ("Signature Experience" feature image)
+
+  ImageMarqueeSection (components/sections/ImageMarqueeSection.tsx)
+    NOT hardcoded — this scrolling strip automatically pulls in EVERY image
+    file placed in public/images/ (except mglogo.png / mglogow.png).
+    To add/remove an image from this strip, just add/remove the file in that folder.
+
+  TestimonialsSection — no images (text-only slider)
+
+  InstagramSection — pulls from data/instagram.ts, see section 7 below
+
+  LocationsSection (components/sections/LocationsSection.tsx)
+    /images/Untitled design 9.png    - line 49  (side image next to the contact CTA)
+    + studio images also used here — see section 6 (STUDIOS) below
+
+
+3. ABOUT PAGE (data/about.ts)
+------------------------------------------------------------------------
+  Founder portrait:
+    /images/Untitled design 6.png    - line 15  (founder.portrait)
+
+  Leadership team photos (team array):
+    /images/Untitled design 9.png    - line 45  - Radhika Suryavanshi
+    /images/udaipur wedding.png      - line 52  - Vikramaditya Rathore
+    /images/Untitled design 30.png   - line 59  - Devika Singhal
+    /images/Untitled design 40.png   - line 66  - Kabir Sen
+
+
+4. SERVICES (data/services.ts) — 6 services, each has 1 hero image + 4 gallery images
+------------------------------------------------------------------------
+  01. Full Wedding Planning            (slug: full-wedding-planning)
+      heroImage : /images/Untitled design 21.png   - line 55
+      gallery   : /images/Untitled design 23.png   - line 72
+                  /images/Untitled design 14.png   - line 73
+                  /images/Untitled design 7.png    - line 74
+                  /images/Untitled design 35.png   - line 75
+
+  02. Destination Weddings             (slug: destination-weddings)
+      heroImage : /images/udaipur wedding.png      - line 129
+      gallery   : /images/Untitled design 9.png    - line 145
+                  /images/Untitled design 18.png   - line 146
+                  /images/Untitled design 32.png   - line 147
+                  /images/Untitled design 11.png   - line 148
+
+  03. Décor & Event Design             (slug: decor-and-design)
+      heroImage : /images/mandap decore.png        - line 168
+      gallery   : /images/decore.png               - line 185
+                  /images/flower decore.png        - line 186
+                  /images/Untitled design 24.png   - line 187
+                  /images/venue decore 4.png       - line 188
+
+  04. Mehendi, Haldi & Sangeet         (slug: mehendi-haldi-and-sangeet)
+      heroImage : /images/Untitled design 39.png   - line 255
+      gallery   : /images/Untitled design 17.png   - line 271
+                  /images/Untitled design 18.png   - line 272
+                  /images/haldi.png                - line 273
+                  /images/Untitled design 29.png   - line 274
+
+  05. Venue & Hospitality Management   (slug: venue-and-hospitality-management)
+      heroImage : /images/Untitled design 24.png   - line 360
+      gallery   : /images/Untitled design 26.png   - line 376
+                  /images/Untitled design 33.png   - line 377
+                  /images/Untitled design 35.png   - line 378
+                  /images/car flower decore.png    - line 379
+
+  06. Photography & Entertainment Curation  (slug: photography-and-entertainment-curation)
+      heroImage : /images/Untitled design 13.png   - line 398
+      gallery   : /images/Untitled design 16.png   - line 415
+                  /images/Untitled design 27.png   - line 416
+                  /images/entertainment.png        - line 417
+                  /images/entertainment 2.png      - line 418
+
+
+5. DESTINATIONS PAGE (data/destinations.ts) — 1 image per destination
+------------------------------------------------------------------------
+  Udaipur              : /images/udaipur.jpg       - line 24
+  Jaipur                : /images/jaipur.jpg        - line 36
+  Jodhpur               : /images/jodhpur.jpg       - line 48
+  Goa                   : /images/goa.jpg           - line 60
+  Mussoorie & Himalayas : /images/mussoorie.jpg     - line 72
+
+
+6. STUDIOS / OFFICE LOCATIONS (data/studios.ts) — shown in Footer + LocationsSection
+------------------------------------------------------------------------
+  Delhi NCR  : /images/Untitled design 6.png   - line 27
+  Kolkata    : /images/Untitled design 9.png   - line 40
+  Pune       : /images/Untitled design 10.png  - line 53
+
+
+7. INSTAGRAM SECTION (data/instagram.ts) — homepage "Instagram Feed"
+------------------------------------------------------------------------
+  ig-1 : /images/Untitled design 30.png  - line 14
+  ig-2 : /images/Untitled design 40.png  - line 23
+  ig-3 : /images/hero-poster.jpg         - line 32
+  ig-4 : /images/pre-wedd-shoot.png      - line 41
+  ig-5 : /images/Untitled design 6.png   - line 50
+  ig-6 : /images/Untitled design 9.png   - line 59
+
+
+8. JOURNAL (data/journal.ts) — 1 cover image per article
+------------------------------------------------------------------------
+  The Art of the Palace Mandap...            : /images/Untitled design 10.png  - line 20
+  Navigating Destination Logistics...        : /images/Untitled design 30.png  - line 34
+  Reviving Royal Banquets...                 : /images/Untitled design 40.png  - line 48
+
+
+9. GALLERY PAGE  (/stories route, app/stories/page.tsx)
+------------------------------------------------------------------------
+  NOT hardcoded — this page automatically shows EVERY image file found in
+  public/images/ (except mglogo.png / mglogow.png), newest-filename sorted.
+  To add a photo to the gallery, just drop the file into public/images/.
+  To remove one, delete the file (but check it isn't referenced elsewhere
+  in this list first, or that other spot will break).
+
+
+10. SITE METADATA / SOCIAL SHARE PREVIEW (app/layout.tsx)
+------------------------------------------------------------------------
+  /images/pre-wedd-shoot.png     - line 56  (Open Graph share image, 1200x630 ideal)
+  /images/Untitled design 6.png  - line 68  (Twitter card image)
+
+
+HOW TO CHANGE AN IMAGE
+------------------------------------------------------------------------
+Easiest: keep the filename identical and just overwrite the file in
+public/images/ with your new picture (same name = zero code changes needed).
+
+To use a NEW filename instead: open the file:line listed above and replace
+the path string, e.g.
+    heroImage: '/images/Untitled design 21.png'
+ -> heroImage: '/images/my-new-photo.jpg'
+Then place my-new-photo.jpg inside public/images/.
+
+Note: many "Untitled design N.png" files are reused in multiple spots across
+this list (e.g. "Untitled design 9.png" appears on the About team grid AND
+the Destination Weddings service gallery AND the Kolkata studio AND an
+Instagram post AND the homepage LocationsSection). Changing that one file
+changes it everywhere it's used — check this list before replacing a shared
+file if you only want to change it in ONE place (in that case, give it a
+new filename and update just that one line instead).

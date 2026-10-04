@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
-import fs from 'fs';
-import path from 'path';
 import SplitTextReveal from '@/components/animations/SplitTextReveal';
 import Reveal from '@/components/animations/Reveal';
 import GalleryLightbox from '@/components/ui/GalleryLightbox';
+import { galleryImages } from '@/data/gallery';
 
 export const metadata: Metadata = {
   title: 'Gallery | Mangalgatha Luxury Wedding Planners',
@@ -11,44 +10,8 @@ export const metadata: Metadata = {
     'A visual archive of the celebrations, details and destinations brought to life by Mangalgatha.',
 };
 
-const IMAGE_EXTENSIONS = new Set(['.png', '.jpg', '.jpeg', '.webp']);
-const EXCLUDED_PREFIXES = ['mglogo'];
-
-function filenameToCaption(filename: string): string {
-  const base = filename.replace(/\.[^.]+$/, '');
-  if (/^untitled design/i.test(base)) {
-    return 'Mangalgatha Celebration';
-  }
-  return base
-    .replace(/[-_]+/g, ' ')
-    .replace(/decore/gi, 'décor')
-    .trim()
-    .split(/\s+/)
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
-function getGalleryImages() {
-  const imagesDir = path.join(process.cwd(), 'public', 'images');
-  const files = fs.readdirSync(imagesDir);
-
-  return files
-    .filter((file) => {
-      const ext = path.extname(file).toLowerCase();
-      if (!IMAGE_EXTENSIONS.has(ext)) return false;
-      const lower = file.toLowerCase();
-      return !EXCLUDED_PREFIXES.some((prefix) => lower.startsWith(prefix));
-    })
-    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }))
-    .map((file) => ({
-      url: `/images/${file}`,
-      caption: filenameToCaption(file),
-      aspect: '3/4',
-    }));
-}
-
 export default function StoriesPage() {
-  const galleryItems = getGalleryImages();
+  const galleryItems = galleryImages.map((img) => ({ ...img, aspect: '3/4' }));
 
   return (
     <div className="pt-24 bg-[#F8F4EC] text-[#1C1C1C]">

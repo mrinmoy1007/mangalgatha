@@ -140,6 +140,11 @@ export default async function ServiceDetailPage({
                     {service.extended.offeringsHeading}
                   </h2>
                   <div className="w-16 h-[1px] bg-[#B08D57] mx-auto mt-4" />
+                  {service.extended.offeringsSubheading && (
+                    <p className="text-sm text-[#555555] font-sans font-light leading-relaxed pt-2">
+                      {service.extended.offeringsSubheading}
+                    </p>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -278,7 +283,11 @@ export default async function ServiceDetailPage({
                 )}
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+              <div
+                className={`grid grid-cols-1 sm:grid-cols-2 gap-8 ${
+                  service.process.length >= 6 ? 'lg:grid-cols-3' : 'lg:grid-cols-5'
+                }`}
+              >
                 {service.process.map((step) => (
                   <div
                     key={step.step}
@@ -298,6 +307,41 @@ export default async function ServiceDetailPage({
               </div>
             </div>
           </section>
+
+          {/* Why Us */}
+          {service.extended.whyUs && service.extended.whyUs.length > 0 && (
+            <section className="py-24 lg:py-32 px-6 sm:px-10 lg:px-14 border-b border-[#B08D57]/20">
+              <div className="max-w-[1520px] mx-auto">
+                <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                  <h2 className="font-serif text-4xl sm:text-5xl uppercase tracking-tight font-light text-[#1C1C1C]">
+                    {service.extended.whyUsHeading}
+                  </h2>
+                  <div className="w-16 h-[1px] bg-[#B08D57] mx-auto mt-4" />
+                  {service.extended.whyUsSubheading && (
+                    <p className="font-serif italic text-lg text-[#5C1A1B] font-light pt-2">
+                      {service.extended.whyUsSubheading}
+                    </p>
+                  )}
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                  {service.extended.whyUs.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="border border-[#B08D57]/40 bg-[#EFE7DA]/40 p-7 space-y-3 hover:border-[#5C1A1B] transition-colors"
+                    >
+                      <h3 className="font-serif text-lg uppercase tracking-wider text-[#1C1C1C] font-light">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-[#555555] font-sans font-light leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
 
           {/* Philosophy */}
           {service.extended.philosophy && service.extended.philosophy.length > 0 && (

@@ -5,8 +5,13 @@ export interface ServiceExtendedContent {
   introParagraphs: string[];
 
   offeringsHeading: string;
+  offeringsSubheading?: string;
   offerings: { number?: string; title: string; desc: string }[];
   offeringsLayout?: 'sidebar' | 'grid';
+
+  whyUsHeading?: string;
+  whyUsSubheading?: string;
+  whyUs?: { title: string; desc: string }[];
 
   entertainmentHeading?: string;
   entertainmentIntro?: string[];
@@ -126,7 +131,7 @@ export const servicesData: Service[] = [
     title: 'Destination Weddings',
     shortDesc: 'Palatial forts of Rajasthan, Mediterranean seaside villas, and tropical sanctuaries transformed into royal empires.',
     fullDesc: 'Whether commanding a 16th-century fortress in Udaipur, an oceanfront palace in Bali, or an Amalfi Coast estate, Mangalgatha commands global destination logistics with unmatched cultural nuance and logistical mastery.',
-    heroImage: '/images/udaipur wedding.png',
+    heroImage: '/images/DSC_1.JPG.png',
     alt: 'Royal Indian destination wedding couple portrait overlooking palace waters',
     features: [
       'Private Island & Heritage Palace Buyouts',
@@ -367,10 +372,12 @@ export const servicesData: Service[] = [
       'Luggage Management & Valet Fleet Logistics'
     ],
     process: [
-      { step: '01', title: 'Guest Mapping', desc: 'Collecting personalized preferences, flight schedules, and dietary restrictions.' },
-      { step: '02', title: 'Royal Welcome Setup', desc: 'Shehnai welcomes, rose petal showers, and curated room hamper drops.' },
-      { step: '03', title: 'Dedicated Butler Wings', desc: 'Shadows assigned to primary family members for round-the-clock assistance.' },
-      { step: '04', title: 'Seamless Checkouts', desc: 'Express baggage collection, return hampers, and airport escorting.' }
+      { step: '01', title: 'Before Arrival', desc: 'Clear communication, schedules, travel information and thoughtful pre-arrival details.' },
+      { step: '02', title: 'Arrival', desc: 'A warm welcome, smooth transfers and a first impression that sets the tone.' },
+      { step: '03', title: 'Settling In', desc: 'Comfortable accommodation, helpful information and everything guests need to feel at ease.' },
+      { step: '04', title: 'The Celebrations', desc: 'Seamless movement between events, thoughtful hospitality and on-ground assistance.' },
+      { step: '05', title: 'The Little Moments', desc: 'Personalised touches, surprises and details that make guests feel genuinely cared for.' },
+      { step: '06', title: 'Farewell', desc: 'A thoughtful final experience that leaves everyone with something beautiful to take home.' }
     ],
     gallery: [
       '/images/Untitled design 26.png',
@@ -386,6 +393,53 @@ export const servicesData: Service[] = [
         'Beautifully chosen. Thoughtfully hosted. Seamlessly managed.'
       ],
       cta: 'Explore Venue & Hospitality →'
+    },
+    extended: {
+      introEyebrow: 'Venue & Hospitality Management',
+      introHeading: 'The Right Venue Does More Than Hold a Wedding. It Becomes Part of the Story.',
+      introQuote: 'Every venue has a personality.',
+      introParagraphs: [
+        'A palace carries history.',
+        'A beachfront resort carries a sense of escape.',
+        'A mountain retreat creates intimacy.',
+        'A heritage property brings a certain romance.',
+        'We help you discover the setting that complements your wedding vision, guest profile, celebrations and experience — while considering the practical details that make a destination work beautifully.',
+        'From luxury hotels and resorts to heritage properties and distinctive destination venues, we look beyond the photographs to understand what the space can truly offer.',
+        'Because the most beautiful venue is the one that feels right for your story.'
+      ],
+      offeringsHeading: 'What We Manage',
+      offeringsSubheading: 'Every Guest Journey, Thoughtfully Considered.',
+      offeringsLayout: 'grid',
+      offerings: [
+        { number: '01', title: 'Venue Selection & Curation', desc: 'The place where it all comes together. We help identify and evaluate venues based on your wedding vision, guest requirements, celebrations, accessibility, accommodation, amenities and overall experience.' },
+        { number: '02', title: 'Accommodation Management', desc: 'Every room should feel like part of the welcome. From room allocations and guest preferences to check-ins and special requirements, we coordinate the details that help your guests settle in comfortably.' },
+        { number: '03', title: 'Arrival & Transfers', desc: 'A smooth journey sets the tone. Airport arrivals, transportation, transfers between venues and event movement are carefully coordinated so guests know where they need to be and when.' },
+        { number: '04', title: 'Welcome Experiences', desc: 'The first hello matters. We create thoughtful arrival experiences that immediately make your guests feel part of the celebration. Welcome amenities, personalised touches, local elements and beautifully considered details can turn an arrival into a memory.' },
+        { number: '05', title: 'Guest Communication', desc: "Everyone knows what's happening next. From schedules and event information to important updates and destination details, we help ensure your guests have the information they need throughout the celebration." },
+        { number: '06', title: 'Hospitality Desk & On-Ground Assistance', desc: 'A familiar face whenever they need one. Our hospitality team provides on-ground assistance throughout the celebration, helping guests navigate schedules, transportation, events and special requests.' },
+        { number: '07', title: 'Event Movement & Logistics', desc: 'Because the celebration should flow. We coordinate guest movement between ceremonies, venues and experiences so that transitions feel organised without ever feeling rigid.' },
+        { number: '08', title: 'Special Requests & Personal Touches', desc: 'The details that make people feel seen. Dietary preferences, accessibility requirements, special celebrations, room requests and thoughtful surprises — we help ensure the individual needs of your guests are never overlooked.' }
+      ],
+      journeyHeading: 'The Guest Journey',
+      journeySubheading: 'From "We\'re on our way" to "We\'ll never forget this."',
+      whyUsHeading: 'Why Mangalgatha',
+      whyUsSubheading: 'Because your guests are part of the celebration, too.',
+      whyUs: [
+        { title: 'Thoughtful Venue Curation', desc: 'We look beyond beauty to find spaces that work beautifully for your celebration and your guests.' },
+        { title: 'Personal Hospitality', desc: 'We treat guest experience as an essential part of the wedding, not an afterthought.' },
+        { title: 'Attention to Detail', desc: 'From arrival timings to individual preferences, we think through the details that make a difference.' },
+        { title: 'Seamless Coordination', desc: 'Multiple venues, events, transfers and guest requirements are brought together under one considered plan.' },
+        { title: 'Warmth With Precision', desc: 'Efficient behind the scenes. Warm and human in front of your guests.' }
+      ],
+      closing: {
+        heading: 'The Venue May Welcome Them. Let the Experience Make Them Feel at Home.',
+        paragraphs: [
+          'You are bringing your favourite people together.',
+          "We'll make sure they feel cared for every step of the way.",
+          'From the first arrival to the final goodbye, let us take care of the details that make a wedding feel effortless.'
+        ],
+        ctaText: 'Plan Your Wedding Experience'
+      }
     }
   },
   {

@@ -114,7 +114,7 @@ export default function MarqueeAndSignatureSection() {
                 data-cursor-text="SIGNATURE"
               >
                 <Image
-                  src="/images/Untitled design 10.png"
+                  src="/images/DSC_5.JPG.png"
                   alt="Mangalgatha signature royal bride"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
