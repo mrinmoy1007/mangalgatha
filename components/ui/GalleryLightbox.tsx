@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -16,6 +17,11 @@ interface GalleryLightboxProps {
 
 export default function GalleryLightbox({ items }: GalleryLightboxProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Keyboard navigation for lightbox
   useEffect(() => {
@@ -33,6 +39,16 @@ export default function GalleryLightbox({ items }: GalleryLightboxProps) {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [selectedIndex, items.length]);
+
+  // Lock background scroll while the lightbox is open
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    const original = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, [selectedIndex]);
 
   return (
     <>
@@ -67,9 +83,16 @@ export default function GalleryLightbox({ items }: GalleryLightboxProps) {
         ))}
       </div>
 
-      {/* Full-screen Lightbox Modal */}
-      {selectedIndex !== null && (
-        <div className="fixed inset-0 z-[10000] bg-[#1C1C1C]/95 backdrop-blur-md flex flex-col justify-between p-6 sm:p-10 animate-in fade-in duration-200">
+      {/* Full-screen Lightbox Modal — portaled to <body> so it always covers the
+          true viewport, even when a scroll-reveal ancestor has left a lingering
+          CSS transform (which would otherwise turn "fixed" into "absolute"). */}
+      {mounted && selectedIndex !== null && createPortal(
+        <div
+          className="fixed inset-0 z-[10000] bg-[#1C1C1C]/95 backdrop-blur-md flex flex-col justify-between p-6 sm:p-10 animate-in fade-in duration-200"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setSelectedIndex(null);
+          }}
+        >
           {/* Top Bar with Caption & Close */}
           <div className="flex items-center justify-between text-[#F8F4EC] border-b border-[#B08D57]/30 pb-4">
             <div className="flex items-center gap-4">
@@ -90,12 +113,18 @@ export default function GalleryLightbox({ items }: GalleryLightboxProps) {
           </div>
 
           {/* Center Image Container */}
-          <div className="relative flex-1 my-4 flex items-center justify-center">
+          <div
+            className="relative flex-1 my-4 flex items-center justify-center"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setSelectedIndex(null);
+            }}
+          >
             <div className="relative max-w-5xl max-h-[75vh] w-full h-full flex items-center justify-center">
               <Image
                 src={items[selectedIndex].url}
                 alt={items[selectedIndex].caption}
                 fill
+                sizes="90vw"
                 className="object-contain"
                 referrerPolicy="no-referrer"
               />
@@ -130,7 +159,8 @@ export default function GalleryLightbox({ items }: GalleryLightboxProps) {
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
