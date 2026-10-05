@@ -293,10 +293,10 @@ export default async function ServiceDetailPage({
                     key={step.step}
                     className="border border-[#B08D57]/40 bg-[#F8F4EC] p-8 space-y-4 hover:border-[#5C1A1B] transition-colors"
                   >
-                    <span className="font-serif text-4xl text-[#B08D57] font-light block">
+                    {/* <span className="font-serif text-4xl text-[#B08D57] font-light block">
                       {step.step}
-                    </span>
-                    <h3 className="font-serif text-xl uppercase tracking-wider text-[#1C1C1C] font-light">
+                    </span> */}
+                    <h3 className="font-serif text-xl uppercase tracking-wider text-[#1C1C1C] font-bold">
                       {step.title}
                     </h3>
                     <p className="text-xs text-[#555555] font-sans font-light leading-relaxed">
@@ -482,11 +482,29 @@ export default async function ServiceDetailPage({
       {/* Enquiry CTA */}
       <section className="py-24 px-6 sm:px-10 lg:px-14 text-center bg-[#5C1A1B] text-[#F8F4EC]">
         <div className="max-w-2xl mx-auto space-y-6">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF7A] font-sans block">
-            Private Studio Advisory
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl uppercase tracking-tight font-light text-[#F8F4EC]">
-            {service.extended ? service.extended.closing.heading : `Inquire About ${service.title}`}
+          {/* <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF7A] font-sans block">
+            Private  Advisory
+          </span> */}
+          <h2
+            className={`font-serif uppercase tracking-tight font-light text-[#F8F4EC] ${
+              Array.isArray(service.extended?.closing.heading)
+                ? 'text-2xl sm:text-3xl lg:text-4xl'
+                : 'text-3xl sm:text-4xl'
+            }`}
+          >
+            {service.extended ? (
+              Array.isArray(service.extended.closing.heading) ? (
+                service.extended.closing.heading.map((line, idx) => (
+                  <span key={idx} className="block mb-2 last:mb-0">
+                    {line}
+                  </span>
+                ))
+              ) : (
+                service.extended.closing.heading
+              )
+            ) : (
+              `Inquire About ${service.title}`
+            )}
           </h2>
           {service.extended?.closing.subheading && (
             <p className="font-serif italic text-xl text-[#D4AF7A] font-light">
@@ -501,7 +519,7 @@ export default async function ServiceDetailPage({
             ))
           ) : (
             <p className="text-xs sm:text-sm text-[#EFE7DA]/80 font-sans font-light leading-relaxed">
-              Our creative directors are at your service for private appointments in Delhi NCR, Kolkata, or Pune.
+              Our creative directors are at your service for private appointments in Delhi NCR or Kolkata.
             </p>
           )}
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-5">

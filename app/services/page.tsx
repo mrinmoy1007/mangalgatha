@@ -87,40 +87,73 @@ export default function ServicesPage() {
                     </h2>
                   </Reveal>
 
-                  <Reveal delay={0.2}>
-                    <p className="font-serif italic text-lg sm:text-xl text-[#5C1A1B] leading-relaxed">
-                      {svc.shortDesc}
-                    </p>
-                    <p className="text-xs sm:text-sm text-[#555555] font-sans font-light leading-relaxed mt-4">
-                      {svc.fullDesc}
-                    </p>
-                  </Reveal>
-
-                  {/* Highlights List */}
-                  <Reveal delay={0.3}>
-                    <div className="pt-2 space-y-2 border-t border-[#B08D57]/20">
-                      {svc.features.map((feat, i) => (
-                        <div key={i} className="text-xs uppercase tracking-[0.16em] text-[#1C1C1C] flex items-center gap-3">
-                          <span className="w-1.5 h-1.5 bg-[#B08D57] rotate-45 inline-block" />
-                          <span>{feat}</span>
+                  {svc.homeSlider ? (
+                    <>
+                      <Reveal delay={0.2}>
+                        <p className="font-serif italic text-lg sm:text-xl text-[#5C1A1B] leading-relaxed">
+                          {svc.homeSlider.tagline}
+                        </p>
+                        <div className="space-y-3 mt-4">
+                          {svc.homeSlider.paragraphs.map((p, i) => (
+                            <p key={i} className="text-xs sm:text-sm text-[#555555] font-sans font-light leading-relaxed">
+                              {p}
+                            </p>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </Reveal>
+                      </Reveal>
 
-                  {/* Explore Detail Page Link */}
-                  <Reveal delay={0.4}>
-                    <div className="pt-6">
-                      <MagneticButton>
-                        <Link
-                          href={`/services/${svc.slug}`}
-                          className="btn-luxury"
-                        >
-                          Explore Our Expertise
-                        </Link>
-                      </MagneticButton>
-                    </div>
-                  </Reveal>
+                      {/* Explore Detail Page Link */}
+                      <Reveal delay={0.4}>
+                        <div className="pt-6">
+                          <MagneticButton>
+                            <Link
+                              href={`/services/${svc.slug}`}
+                              className="btn-luxury"
+                            >
+                              {svc.homeSlider.cta}
+                            </Link>
+                          </MagneticButton>
+                        </div>
+                      </Reveal>
+                    </>
+                  ) : (
+                    <>
+                      <Reveal delay={0.2}>
+                        <p className="font-serif italic text-lg sm:text-xl text-[#5C1A1B] leading-relaxed">
+                          {svc.shortDesc}
+                        </p>
+                        <p className="text-xs sm:text-sm text-[#555555] font-sans font-light leading-relaxed mt-4">
+                          {svc.fullDesc}
+                        </p>
+                      </Reveal>
+
+                      {/* Highlights List */}
+                      <Reveal delay={0.3}>
+                        <div className="pt-2 space-y-2 border-t border-[#B08D57]/20">
+                          {svc.features.map((feat, i) => (
+                            <div key={i} className="text-xs uppercase tracking-[0.16em] text-[#1C1C1C] flex items-center gap-3">
+                              <span className="w-1.5 h-1.5 bg-[#B08D57] rotate-45 inline-block" />
+                              <span>{feat}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </Reveal>
+
+                      {/* Explore Detail Page Link */}
+                      <Reveal delay={0.4}>
+                        <div className="pt-6">
+                          <MagneticButton>
+                            <Link
+                              href={`/services/${svc.slug}`}
+                              className="btn-luxury"
+                            >
+                              Explore Our Expertise
+                            </Link>
+                          </MagneticButton>
+                        </div>
+                      </Reveal>
+                    </>
+                  )}
                 </div>
               </div>
             );

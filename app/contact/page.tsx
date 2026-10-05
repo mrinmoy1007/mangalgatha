@@ -7,7 +7,7 @@ import { ArrowUpRight, Phone, Mail, MapPin, Clock } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Contact Us & Private Consultation | Mangalgatha',
   description:
-    'Schedule a confidential wedding planning consultation with Mangalgatha in Delhi NCR, Kolkata, or Pune.',
+    'Schedule a confidential wedding planning consultation with Mangalgatha in Delhi NCR or Kolkata.',
 };
 
 export default function ContactPage() {

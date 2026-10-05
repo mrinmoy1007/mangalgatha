@@ -26,7 +26,7 @@ export interface ServiceExtendedContent {
 
   philosophy?: { heading: string; subheading: string; paragraphs: string[] }[];
 
-  closing: { heading: string; subheading?: string; paragraphs: string[]; ctaText?: string };
+  closing: { heading: string | string[]; subheading?: string; paragraphs: string[]; ctaText?: string };
 }
 
 export interface Service {
@@ -57,7 +57,7 @@ export const servicesData: Service[] = [
     title: 'Full Wedding Planning',
     shortDesc: 'From the first idea to the last dance, we take care of it all.',
     fullDesc: 'At Mangalgatha, full wedding planning means taking care of the details you see — and even more of the ones you don\'t. We bring together the people, plans, places, timelines and possibilities that make your celebration happen, while keeping your story at the centre of every decision.',
-    heroImage: '/images/Untitled design 21.png',
+    heroImage: '/images/DSC_45.png',
     alt: 'Grand royal Indian wedding mandap ceremony at twilight',
     features: [
       'Wedding Vision & Concept Design',
@@ -362,7 +362,7 @@ export const servicesData: Service[] = [
     title: 'Venue & Hospitality Management',
     shortDesc: 'Hospitality redefined with custom concierge desks, private butler wings, and premium protocol.',
     fullDesc: 'Warm Indian hospitality executed with five-star precision. We manage high-profile guest registries, private flight charters, personalized welcome suites, dietary curations, and round-the-clock room concierges.',
-    heroImage: '/images/Untitled design 24.png',
+    heroImage: '/images/VHM.png',
     alt: 'Royal Rajasthani palace courtyard and wedding hospitality pavilion',
     features: [
       'Dedicated Guest Experience App & WhatsApp Desk',
@@ -432,7 +432,7 @@ export const servicesData: Service[] = [
         { title: 'Warmth With Precision', desc: 'Efficient behind the scenes. Warm and human in front of your guests.' }
       ],
       closing: {
-        heading: 'The Venue May Welcome Them. Let the Experience Make Them Feel at Home.',
+        heading: ['The Venue May Welcome Them.', 'Let the Experience Make Them Feel at Home.'],
         paragraphs: [
           'You are bringing your favourite people together.',
           "We'll make sure they feel cared for every step of the way.",
@@ -467,9 +467,9 @@ export const servicesData: Service[] = [
     ],
     gallery: [
       '/images/Untitled design 16.png',
-      '/images/Untitled design 27.png',
+      '/images/DSC_26.jpg',
       '/images/entertainment.png',
-      '/images/entertainment 2.png'
+      '/images/DSC_4.JPG.png'
     ],
     extended: {
       introEyebrow: 'Photography & Entertainment Curation',

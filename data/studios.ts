@@ -38,18 +38,5 @@ export const studiosData: Studio[] = [
     hours: 'Monday - Saturday: 10:30 AM - 7:30 PM (By Private Appointment)',
     mapUrl: 'https://maps.google.com/?q=Park+Street+Kolkata',
     image: '/images/Untitled design 9.png'
-  },
-  {
-    city: 'Pune',
-    badge: 'Western India Operations',
-    name: 'Mangalgatha Pune Office',
-    address: 'Koregaon Park',
-    landmark: 'Pune, Maharashtra 411001, India',
-    phone: '+918595319969',
-    displayPhone: '+91 8595 319969',
-    email: 'info@mangalgatha.in',
-    hours: 'Monday – Saturday: 10:00 AM – 7:00 PM (By Private Appointment)',
-    mapUrl: 'https://maps.google.com/?q=Koregaon+Park+Pune',
-    image: '/images/Untitled design 10.png'
   }
 ];

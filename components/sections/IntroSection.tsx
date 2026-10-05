@@ -77,21 +77,21 @@ export default function IntroSection() {
 
             {/* Micro stats / distinctions */}
             <Reveal delay={0.25}>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-6 border-t border-[#B08D57]/20">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-[#B08D57]/20">
                 <div>
-                  <span className="font-serif text-3xl text-[#5C1A1B] block font-light">STORY-LED CELEBRATIONS</span>
+                  <span className="font-serif text-2xl sm:text-3xl text-[#5C1A1B] block font-light break-words">STORY-LED CELEBRATIONS</span>
                   <span className="text-[9px] uppercase tracking-[0.2em] text-[#8E7145] font-sans">
                     Every wedding begins with understanding the story behind the couple.
                   </span>
                 </div>
                 <div>
-                  <span className="font-serif text-3xl text-[#5C1A1B] block font-light">THOUGHTFUL ARTISTRY</span>
+                  <span className="font-serif text-2xl sm:text-3xl text-[#5C1A1B] block font-light break-words">THOUGHTFUL ARTISTRY</span>
                   <span className="text-[9px] uppercase tracking-[0.2em] text-[#8E7145] font-sans">
                     From décor and florals to culinary and entertainment experiences, every detail is intentionally curated.
                   </span>
                 </div>
                 <div>
-                  <span className="font-serif text-3xl text-[#5C1A1B] block font-light">SEAMLESS EXECUTION</span>
+                  <span className="font-serif text-2xl sm:text-3xl text-[#5C1A1B] block font-light break-words">SEAMLESS EXECUTION</span>
                   <span className="text-[9px] uppercase tracking-[0.2em] text-[#8E7145] font-sans">
                     One vision, meticulously managed from the first conversation to the final farewell.
                   </span>

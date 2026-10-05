@@ -74,7 +74,7 @@ export default function LocationsSection() {
 
           <Reveal delay={0.3}>
             <p className="text-sm sm:text-base text-[#EFE7DA]/85 font-sans font-light leading-relaxed">
-              We welcome prospective couples by private appointment at our design studios in Delhi NCR, Kolkata, and Pune to review material portfolios, botanical palettes, and custom wedding narratives.
+              We welcome prospective couples by private appointment at our design studios in Delhi NCR and Kolkata to review material portfolios, botanical palettes, and custom wedding narratives.
             </p>
           </Reveal>
 

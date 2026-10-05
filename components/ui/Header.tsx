@@ -163,10 +163,10 @@ export default function Header() {
           {/* Center Logo */}
           <div className="flex flex-col items-center justify-center text-center">
             <Link href="/" className="group flex flex-col items-center">
-              <img 
-                src="/images/mglogo.png" 
-                alt="Mangalgatha Logo" 
-                className={`h-12 sm:h-16 w-auto object-contain transition-all ${isTransparent ? 'opacity-100' : 'opacity-90'}`} 
+              <img
+                src={isTransparent ? '/images/mglogow.png' : '/images/mglogo.png'}
+                alt="Mangalgatha Logo"
+                className="h-12 sm:h-16 w-auto object-contain transition-all"
               />
             </Link>
           </div>
@@ -249,15 +249,15 @@ export default function Header() {
 
           {/* Mobile Actions: Phone + Hamburger Button */}
           <div className="flex items-center gap-3 lg:hidden">
-            <button
-              onClick={() => setPhoneOpen(!phoneOpen)}
-              aria-label="Direct studio contact numbers"
-              className={`p-2 border transition-all ${
+            <a
+              href="tel:+918595319969"
+              aria-label="Call +91 8595 319969"
+              className={`p-2 border transition-all flex items-center justify-center ${
                 isTransparent ? 'border-[#F8F4EC]/50 text-[#F8F4EC]' : 'border-[#B08D57] text-[#1C1C1C]'
               }`}
             >
               <Phone className="w-4 h-4" />
-            </button>
+            </a>
             <button
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open mobile menu"
@@ -277,7 +277,7 @@ export default function Header() {
           {/* Top Bar with Close Button */}
           <div className="flex items-center justify-between border-b border-[#B08D57]/30 pb-6">
             <div className="flex items-center">
-              <img src="/images/mglogo.png" alt="Mangalgatha Logo" className="h-10 sm:h-12 w-auto object-contain" />
+              <img src="/images/mglogow.png" alt="Mangalgatha Logo" className="h-10 sm:h-12 w-auto object-contain" />
             </div>
             <button
               onClick={() => setMobileMenuOpen(false)}
@@ -315,7 +315,7 @@ export default function Header() {
           {/* Studio Quick Dial on Mobile */}
           <div className="border-t border-[#B08D57]/30 pt-6">
             <p className="text-[10px] uppercase tracking-[0.25em] text-[#B08D57] text-center mb-4">
-              Private Concierge Lines
+              Private Lines
             </p>
             <div className="flex flex-wrap justify-around text-center gap-3 text-xs tracking-wider">
               <div>
@@ -324,10 +324,6 @@ export default function Header() {
               </div>
               <div>
                 <span className="text-[9px] uppercase tracking-widest text-[#EFE7DA]/70 block">Kolkata</span>
-                <a href="tel:+918595319969" className="hover:text-[#B08D57]">+91 8595 319969</a>
-              </div>
-              <div>
-                <span className="text-[9px] uppercase tracking-widest text-[#EFE7DA]/70 block">Pune</span>
                 <a href="tel:+918595319969" className="hover:text-[#B08D57]">+91 8595 319969</a>
               </div>
             </div>
