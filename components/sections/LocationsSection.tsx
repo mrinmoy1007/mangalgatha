@@ -89,8 +89,8 @@ export default function LocationsSection() {
           </Reveal>
         </div>
 
-        {/* 3 Studio Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 pt-12 border-t border-[#B08D57]/30">
+        {/* Studio Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20 pt-12 border-t border-[#B08D57]/30 max-w-4xl mx-auto">
           {studiosData.map((studio, idx) => (
             <Reveal key={studio.city} delay={0.2 + idx * 0.1}>
               <div className="border border-[#B08D57]/40 bg-[#1C1C1C]/60 backdrop-blur-xs p-6 sm:p-8 space-y-4 hover:border-[#D4AF7A] transition-colors group">

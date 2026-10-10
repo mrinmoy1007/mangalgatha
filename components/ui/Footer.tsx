@@ -65,10 +65,10 @@ export default function Footer() {
             </p>
             <div className="pt-2">
               <span className="text-[10px] uppercase tracking-[0.2em] text-[#B08D57] block">
-                Headquarters
+                Registered Office
               </span>
               <span className="text-xs text-[#EFE7DA]/80 block mt-1">
-                Gurugram
+                Gurgaon
               </span>
             </div>
           </div>

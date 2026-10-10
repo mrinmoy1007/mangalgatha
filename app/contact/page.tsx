@@ -7,7 +7,7 @@ import { ArrowUpRight, Phone, Mail, MapPin, Clock } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Contact Us & Private Consultation | Mangalgatha',
   description:
-    'Schedule a confidential wedding planning consultation with Mangalgatha in Delhi NCR or Kolkata.',
+    'Schedule a confidential wedding planning consultation with Mangalgatha in Gurgaon or Kolkata.',
 };
 
 export default function ContactPage() {
@@ -117,7 +117,7 @@ export default function ContactPage() {
               <div className="relative w-full h-64 sm:h-72 bg-[#EFE7DA]">
                 <iframe
                   title="Mangalgatha Delhi Studio Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12703.777030732695!2d77.05954469701048!3d28.403180487421295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2266ebb9a9b9%3A0xee646ae45de38202!2sSector%2065%2C%20Gurugram%2C%20Haryana!5e1!3m2!1sen!2sin!4v1791058736511!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.86196281553!2d77.06573297494846!3d28.405925794336007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d22689d145c33%3A0xb70c9f69827b3!2sEmerald%20Plaza!5e1!3m2!1sen!2sin!4v1791634757895!5m2!1sen!2sin"
                   className="w-full h-full border-0 filter contrast-125 saturate-50"
                   loading="lazy"
                   referrerPolicy="no-referrer"
