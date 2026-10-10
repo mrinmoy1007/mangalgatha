@@ -16,7 +16,7 @@ export const studiosData: Studio[] = [
   {
     city: 'Gurgaon',
     badge: 'Registered Office',
-    name: 'Zovent Private Limited',
+    name: 'MANGALGATHA',
     address: 'EPO-07, Unit No. 012-014, 7th Floor, Emerald Plaza, Sector-65',
     landmark: 'Gurgaon, Haryana 122101, India',
     phone: '+918595319969',
@@ -29,7 +29,7 @@ export const studiosData: Studio[] = [
   {
     city: 'Kolkata',
     badge: 'Corporate Office',
-    name: 'Zovent Private Limited',
+    name: 'MANGALGATHA',
     address: '13th Floor, Unit No. 1319, Bengal Eco Intelligent Park, EM Block, Sector V, Salt Lake',
     landmark: 'Bidhannagar, Kolkata, West Bengal 700091, India',
     phone: '+918595319969',

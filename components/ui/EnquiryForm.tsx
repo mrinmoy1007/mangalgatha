@@ -65,9 +65,7 @@ export default function EnquiryForm() {
   return (
     <div className="bg-[#F8F4EC] border border-[#B08D57]/40 shadow-xl p-8 sm:p-12">
       <div className="mb-8 pb-6 border-b border-[#B08D57]/20">
-        <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans font-medium block">
-          Confidential Dossier
-        </span>
+
         <h3 className="font-serif text-3xl sm:text-4xl uppercase tracking-tight text-[#1C1C1C] font-light mt-1">
           Initiate Consultation
         </h3>
@@ -206,10 +204,11 @@ export default function EnquiryForm() {
             {...register('budget')}
             className="w-full bg-white/70 border border-[#B08D57]/40 px-4 py-3 text-xs text-[#1C1C1C] font-sans focus:outline-hidden focus:border-[#5C1A1B] transition-colors"
           >
+            <option value="Under ₹10 Lakhs"> Under ₹10 Lakhs</option>
             <option value="₹10 Lakhs – ₹1.0 Crore">₹10 Lakhs – ₹1.0 Crore</option>
             <option value="₹1.0 Crore – ₹3.0 Crore">₹1.0 Crore – ₹3.0 Crore</option>
             <option value="₹3.0 Crore – ₹6.0 Crore">₹3.0 Crore – ₹6.0 Crore</option>
-            <option value="₹6.0 Crore+ (Monumental Palatial Scope)">₹6.0 Crore+ (Monumental Palatial Scope)</option>
+            <option value="₹6.0 Crore+ ">₹6.0 Crore+  </option>
           </select>
         </div>
 
@@ -239,7 +238,7 @@ export default function EnquiryForm() {
             {isPending ? (
               <>
                 <Loader2 className="w-4 h-4 animate-spin text-[#D4AF7A]" />
-                <span>Transmitting Dossier...</span>
+                <span>Preparing Your Celebration Details...</span>
               </>
             ) : (
               <span>Submit Confidential Consultation Request</span>
