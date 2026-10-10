@@ -22,7 +22,7 @@ export const studiosData: Studio[] = [
     phone: '+918595319969',
     displayPhone: '+91 8595 319969',
     email: 'info@mangalgatha.in',
-    hours: 'Monday - Saturday: 10:30 AM - 7:30 PM (By Private Appointment)',
+    hours: 'Monday - Saturday: 10:30 AM - 7:30 PM ',
     mapUrl: 'https://maps.google.com/?q=Emerald+Plaza+Sector+65+Gurgaon',
     image: '/images/Untitled design 6.png'
   },
@@ -35,7 +35,7 @@ export const studiosData: Studio[] = [
     phone: '+918595319969',
     displayPhone: '+91 8595 319969',
     email: 'info@mangalgatha.in',
-    hours: 'Monday - Saturday: 10:30 AM - 7:30 PM (By Private Appointment)',
+    hours: 'Monday - Saturday: 10:30 AM - 7:30 PM',
     mapUrl: 'https://maps.google.com/?q=Bengal+Eco+Intelligent+Park+Salt+Lake+Kolkata',
     image: '/images/Untitled design 9.png'
   }

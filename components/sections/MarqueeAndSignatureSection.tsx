@@ -65,25 +65,23 @@ export default function MarqueeAndSignatureSection() {
             <Reveal delay={0.3}>
               <div className="space-y-4 pt-2">
                 <div className="flex items-start gap-4">
-                  <span className="font-serif text-xl text-[#B08D57] font-light">01</span>
                   <div>
                     <h4 className="text-xs uppercase tracking-[0.2em] font-medium text-[#1C1C1C]">
-                      Private Studio Access
+                      Personalized Planning Experience
                     </h4>
                     <p className="text-xs text-[#666666] font-light mt-0.5">
-                      Direct liaison with royal custodians of Rajasthan, Michelin banqueting chefs, and bespoke couturiers.
+                      Personalized wedding planning with curated venues, exceptional culinary artistry, and custom-designed couture experiences.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <span className="font-serif text-xl text-[#B08D57] font-light">02</span>
                   <div>
                     <h4 className="text-xs uppercase tracking-[0.2em] font-medium text-[#1C1C1C]">
-                      Unseen Logistics Protocol
+                      Seamless Guest Experience
                     </h4>
                     <p className="text-xs text-[#666666] font-light mt-0.5">
-                      Private airstrip charters, biometric luggage handling, and dedicated guest shadow concierges.
+                     Thoughtfully coordinated travel, discreet guest assistance, and personalized hospitality for a celebration that unfolds effortlessly.
                     </p>
                   </div>
                 </div>
