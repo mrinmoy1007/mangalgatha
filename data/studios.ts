@@ -14,11 +14,11 @@ export interface Studio {
 
 export const studiosData: Studio[] = [
   {
-    city: 'Delhi NCR',
+    city: 'Gurugram',
     badge: 'Headquarters ',
-    name: 'Mangalgatha Delhi-NCR office',
+    name: 'Mangalgatha Gurugram office',
     address: 'Sector-65',
-    landmark: 'Delhi-NCR, Delhi 122102, India',
+    landmark: 'Gurugram, Haryana 122001, India',
     phone: '+918595319969',
     displayPhone: '+91 8595 319969',
     email: 'info@mangalgatha.in',
@@ -30,13 +30,13 @@ export const studiosData: Studio[] = [
     city: 'Kolkata',
     badge: 'Eastern India office',
     name: 'Mangalgatha Kolkata office',
-    address: 'Park Street Area',
+    address: 'Saltlake City, Sector 5',
     landmark: 'Kolkata, West Bengal 700016, India',
     phone: '+918595319969',
     displayPhone: '+91 8595 319969',
     email: 'info@mangalgatha.in',
     hours: 'Monday - Saturday: 10:30 AM - 7:30 PM (By Private Appointment)',
-    mapUrl: 'https://maps.google.com/?q=Park+Street+Kolkata',
+    mapUrl: 'https://maps.google.com/?q=Saltlake+City+Kolkata',
     image: '/images/Untitled design 9.png'
   }
 ];

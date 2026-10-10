@@ -127,29 +127,16 @@ export default function HeroSection() {
         {/* Left Side Images (Two staggered portrait photos) */}
         <div
           ref={leftGroupRef}
-          className="hidden lg:flex flex-col gap-8 absolute left-4 xl:left-12 top-1/2 -translate-y-1/2 z-10 pointer-events-none"
+          className="hidden lg:flex absolute left-4 xl:left-12 top-1/2 -translate-y-1/2 z-10 pointer-events-none"
         >
-          {/* Top Left Image */}
-          <div className="w-44 xl:w-56 aspect-[3/4] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img -translate-y-6">
+          {/* Left Image */}
+          <div className="w-44 xl:w-56 aspect-[3/4] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img">
             <Image
               src="/images/Untitled design 14.png"
               alt="Indian royal couture bride in crimson lehenga"
               fill
               priority
               sizes="(max-width: 1280px) 176px, 224px"
-              className="object-cover"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-[#5C1A1B]/15" />
-          </div>
-
-          {/* Bottom Left Image */}
-          <div className="w-36 xl:w-48 aspect-[2/3] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img translate-x-8 translate-y-6">
-            <Image
-              src="/images/Untitled design 38.png"
-              alt="Sacred Indian wedding mandap with fresh floral blooms"
-              fill
-              sizes="(max-width: 1280px) 144px, 192px"
               className="object-cover"
               referrerPolicy="no-referrer"
             />
@@ -188,28 +175,15 @@ export default function HeroSection() {
         {/* Right Side Images (Two staggered portrait photos) */}
         <div
           ref={rightGroupRef}
-          className="hidden lg:flex flex-col gap-8 absolute right-4 xl:right-12 top-1/2 -translate-y-1/2 z-10 pointer-events-none"
+          className="hidden lg:flex absolute right-4 xl:right-12 top-1/2 -translate-y-1/2 z-10 pointer-events-none"
         >
-          {/* Top Right Image */}
-          <div className="w-36 xl:w-48 aspect-[2/3] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img -translate-x-6 -translate-y-8">
+          {/* Right Image */}
+          <div className="w-36 xl:w-48 aspect-[2/3] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img">
             <Image
               src="/images/Untitled design 20.png"
               alt="Couture bridal emerald polki jewelry and veil"
               fill
               sizes="(max-width: 1280px) 144px, 192px"
-              className="object-cover"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-[#5C1A1B]/15" />
-          </div>
-
-          {/* Bottom Right Image */}
-          <div className="w-44 xl:w-56 aspect-[3/4] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img translate-y-8">
-            <Image
-              src="/images/Untitled design.png"
-              alt="Royal palace illuminated for luxury wedding celebrations"
-              fill
-              sizes="(max-width: 1280px) 176px, 224px"
               className="object-cover"
               referrerPolicy="no-referrer"
             />

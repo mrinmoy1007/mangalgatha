@@ -1,7 +1,7 @@
 'use client';
 
 export default function WhatsAppButton() {
-  const whatsappUrl = 'https://wa.me/918595319969?text=Hello%20Mangalgatha%20Studio,%20I%20would%20like%20to%20inquire%20about%20wedding%20planning%20services.';
+  const whatsappUrl = 'https://wa.me/918595319969?text=Hello%20Mangalgatha%20Team,%20I%20would%20like%20to%20inquire%20about%20wedding%20planning%20services.';
 
   return (
     <aside aria-label="WhatsApp Concierge" className="fixed bottom-7 right-7 z-40">

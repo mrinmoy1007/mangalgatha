@@ -91,11 +91,11 @@ export default async function JournalDetailPage({ params }: ArticlePageProps) {
       {/* CTA */}
       <section className="py-24 px-6 sm:px-10 text-center bg-[#EFE7DA]">
         <div className="max-w-2xl mx-auto space-y-6">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans block">
+          {/* <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans block">
             The Studio
-          </span>
+          </span> */}
           <h2 className="font-serif text-3xl sm:text-4xl uppercase tracking-tight text-[#1C1C1C] font-light">
-            Commission Mangalgatha for Your Celebration
+             Commission Mangalgatha for Your Celebration
           </h2>
           <div className="pt-2">
             <MagneticButton>

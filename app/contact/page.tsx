@@ -112,12 +112,7 @@ export default function ContactPage() {
             {/* Embedded Stylized Map Frame */}
             <div className="border border-[#B08D57]/40 shadow-lg overflow-hidden space-y-3">
               <div className="bg-[#5C1A1B] text-[#F8F4EC] px-6 py-3 flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-[0.25em] font-sans text-[#D4AF7A]">
-                  Delhi NCR  Map
-                </span>
-                <span className="text-[10px] uppercase tracking-widest text-[#EFE7DA]/70 font-sans">
-                  Sector-65
-                </span>
+
               </div>
               <div className="relative w-full h-64 sm:h-72 bg-[#EFE7DA]">
                 <iframe

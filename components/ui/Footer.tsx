@@ -68,7 +68,7 @@ export default function Footer() {
                 Headquarters
               </span>
               <span className="text-xs text-[#EFE7DA]/80 block mt-1">
-                Delhi NCR
+                Gurugram
               </span>
             </div>
           </div>

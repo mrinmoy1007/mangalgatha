@@ -269,9 +269,9 @@ export default async function ServiceDetailPage({
           <section className="py-24 lg:py-32 px-6 sm:px-10 lg:px-14 bg-[#EFE7DA] border-b border-[#B08D57]/20">
             <div className="max-w-[1520px] mx-auto">
               <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
-                <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans block">
+                {/* <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans block">
                   Methodology
-                </span>
+                </span> */}
                 <h2 className="font-serif text-4xl sm:text-5xl uppercase tracking-tight text-[#1C1C1C] font-light">
                   {service.extended.journeyHeading}
                 </h2>
@@ -407,11 +407,11 @@ export default async function ServiceDetailPage({
           <section className="py-24 lg:py-32 px-6 sm:px-10 lg:px-14 bg-[#EFE7DA] border-b border-[#B08D57]/20">
             <div className="max-w-[1520px] mx-auto">
               <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
-                <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans block">
+                {/* <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans block">
                   Methodology
-                </span>
+                </span> */}
                 <h2 className="font-serif text-4xl sm:text-5xl uppercase tracking-tight text-[#1C1C1C] font-light">
-                  The Four-Phase Orchestration
+                  The Art of Celebration
                 </h2>
                 <div className="w-16 h-[1px] bg-[#B08D57] mx-auto mt-4" />
               </div>
@@ -422,10 +422,10 @@ export default async function ServiceDetailPage({
                     key={step.step}
                     className="border border-[#B08D57]/40 bg-[#F8F4EC] p-8 space-y-4 hover:border-[#5C1A1B] transition-colors"
                   >
-                    <span className="font-serif text-4xl text-[#B08D57] font-light block">
+                    {/* <span className="font-serif text-4xl text-[#B08D57] font-light block">
                       {step.step}
-                    </span>
-                    <h3 className="font-serif text-xl uppercase tracking-wider text-[#1C1C1C] font-light">
+                    </span> */}
+                    <h3 className="font-serif text-xl uppercase tracking-wider text-[#1C1C1C] font-bold">
                       {step.title}
                     </h3>
                     <p className="text-xs text-[#555555] font-sans font-light leading-relaxed">
