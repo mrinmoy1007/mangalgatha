@@ -9,7 +9,6 @@ import { studiosData } from '@/data/studios';
 
 export default function Header() {
   const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [phoneOpen, setPhoneOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -18,16 +17,9 @@ export default function Header() {
   const phoneRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
 
-  // Determine if this is a dark background page (like home top hero)
-  // On home, the hero is full viewport with white text until scrolled.
-  const isHome = pathname === '/';
-
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      // 80px threshold for background color change
-      setIsScrolled(currentScrollY > 80);
 
       // Hide on scroll down, show on scroll up
       if (currentScrollY > 150) {
@@ -71,12 +63,11 @@ export default function Header() {
     setServicesOpen(false);
   }
 
-  // Color logic
-  const isTransparent = isHome && !isScrolled;
-  const textColor = isTransparent ? 'text-[#F8F4EC]' : 'text-[#1C1C1C]';
-  const logoSubColor = isTransparent ? 'text-[#D4AF7A]' : 'text-[#B08D57]';
-  const borderBottom = isScrolled ? 'border-b border-[#B08D57]/20 shadow-xs' : 'border-b border-transparent';
-  const bgColor = isScrolled ? 'bg-[#F8F4EC]/95 backdrop-blur-md' : 'bg-transparent';
+  // Fixed color scheme sitewide: solid cream bar, dark text, on every page
+  // and at every scroll position (including over the home hero).
+  const textColor = 'text-[#1C1C1C]';
+  const borderBottom = 'border-b border-[#B08D57]/20 shadow-xs';
+  const bgColor = 'bg-[#F8F4EC]/95 backdrop-blur-md';
 
   return (
     <>
@@ -164,7 +155,7 @@ export default function Header() {
           <div className="flex flex-col items-center justify-center text-center">
             <Link href="/" className="group flex flex-col items-center">
               <img
-                src={isTransparent ? '/images/mglogow.png' : '/images/mglogo.png'}
+                src="/images/mglogo.png"
                 alt="Mangalgatha Logo"
                 className="h-12 sm:h-16 w-auto object-contain transition-all"
               />
@@ -205,11 +196,7 @@ export default function Header() {
               <button
                 onClick={() => setPhoneOpen(!phoneOpen)}
                 aria-label="Direct studio contact numbers"
-                className={`p-2 border transition-all duration-300 rounded-none flex items-center justify-center ${
-                  isTransparent
-                    ? 'border-[#F8F4EC]/40 text-[#F8F4EC] hover:border-[#B08D57] hover:text-[#B08D57]'
-                    : 'border-[#B08D57]/50 text-[#1C1C1C] hover:border-[#5C1A1B] hover:text-[#5C1A1B]'
-                }`}
+                className="p-2 border transition-all duration-300 rounded-none flex items-center justify-center border-[#B08D57]/50 text-[#1C1C1C] hover:border-[#5C1A1B] hover:text-[#5C1A1B]"
               >
                 <Phone className="w-3.5 h-3.5" />
               </button>
@@ -252,18 +239,14 @@ export default function Header() {
             <a
               href="tel:+918595319969"
               aria-label="Call +91 8595 319969"
-              className={`p-2 border transition-all flex items-center justify-center ${
-                isTransparent ? 'border-[#F8F4EC]/50 text-[#F8F4EC]' : 'border-[#B08D57] text-[#1C1C1C]'
-              }`}
+              className="p-2 border transition-all flex items-center justify-center border-[#B08D57] text-[#1C1C1C]"
             >
               <Phone className="w-4 h-4" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open mobile menu"
-              className={`p-2 transition-all ${
-                isTransparent ? 'text-[#F8F4EC]' : 'text-[#1C1C1C]'
-              }`}
+              className="p-2 transition-all text-[#1C1C1C]"
             >
               <Menu className="w-6 h-6" />
             </button>

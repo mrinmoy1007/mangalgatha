@@ -130,13 +130,13 @@ export default function HeroSection() {
           className="hidden lg:flex absolute left-4 xl:left-12 top-1/2 -translate-y-1/2 z-10 pointer-events-none"
         >
           {/* Left Image */}
-          <div className="w-44 xl:w-56 aspect-[3/4] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img">
+          <div className="w-52 xl:w-64 aspect-[2/3] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img">
             <Image
               src="/images/Untitled design 14.png"
               alt="Indian royal couture bride in crimson lehenga"
               fill
               priority
-              sizes="(max-width: 1280px) 176px, 224px"
+              sizes="(max-width: 1280px) 208px, 256px"
               className="object-cover"
               referrerPolicy="no-referrer"
             />
@@ -178,12 +178,12 @@ export default function HeroSection() {
           className="hidden lg:flex absolute right-4 xl:right-12 top-1/2 -translate-y-1/2 z-10 pointer-events-none"
         >
           {/* Right Image */}
-          <div className="w-36 xl:w-48 aspect-[2/3] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img">
+          <div className="w-52 xl:w-64 aspect-[2/3] relative overflow-hidden shadow-2xl border border-[#B08D57]/30 hero-stagger-img">
             <Image
               src="/images/Untitled design 20.png"
               alt="Couture bridal emerald polki jewelry and veil"
               fill
-              sizes="(max-width: 1280px) 144px, 192px"
+              sizes="(max-width: 1280px) 208px, 256px"
               className="object-cover"
               referrerPolicy="no-referrer"
             />

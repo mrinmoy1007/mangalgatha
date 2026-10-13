@@ -18,7 +18,7 @@ export const testimonialsData: Testimonial[] = [
   },
   {
     id: '2',
-    quote: "I can't express how lovely Mangalgatha is, Their team was extraordinarily talented, committed, and professional from the minute we started planning. They went above and beyond to make sure our wedding was amazing in every way. They executed our concept with the most amazing precision and attention to detail. Thanks to their superb planning and communication abilities, the entire process was stress-free. The breathtaking location, excellent design, and flawless execution left our guests speechless. We will always be grateful to Golden Leaf Weddings for making our special day truly amazing. They represent quality in the wedding sector. Hats off!",
+    quote: "I can't express how lovely Mangalgatha is, Their team was extraordinarily talented, committed, and professional from the minute we started planning. They went above and beyond to make sure our wedding was amazing in every way. They executed our concept with the most amazing precision and attention to detail. Thanks to their superb planning and communication abilities, the entire process was stress-free. The breathtaking location, excellent design, and flawless execution left our guests speechless. We will always be grateful to Mangalgatha for making our special day truly amazing. They represent quality in the wedding sector. Hats off!",
     couple: 'Meera & Siddharth Mehta',
     location: 'Jodhpur, Rajasthan',
     venue: 'Umaid Bhawan Palace',
