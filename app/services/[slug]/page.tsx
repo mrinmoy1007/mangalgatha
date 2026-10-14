@@ -151,17 +151,17 @@ export default async function ServiceDetailPage({
                   {service.extended.offerings.map((item, idx) => (
                     <div
                       key={idx}
-                      className="border border-[#B08D57]/40 bg-[#F8F4EC] p-8 space-y-3 hover:border-[#5C1A1B] transition-colors"
+                      className="border border-[#B08D57]/40 bg-[#F8F4EC] p-8 flex flex-col hover:border-[#5C1A1B] transition-colors"
                     >
                       {/* {item.number && (
                         <span className="font-serif text-3xl text-[#B08D57] font-light block">
                           {item.number}
                         </span>
                       )} */}
-                      <h3 className="font-serif text-lg uppercase tracking-wider text-[#1C1C1C] font-light">
+                      <h3 className="font-serif text-lg uppercase tracking-wider text-[#1C1C1C] font-light min-h-14">
                         {item.title}
                       </h3>
-                      <p className="text-xs text-[#555555] font-sans font-light leading-relaxed">
+                      <p className="text-xs text-[#555555] font-sans font-light leading-relaxed mt-3">
                         {item.desc}
                       </p>
                     </div>
@@ -227,45 +227,58 @@ export default async function ServiceDetailPage({
                     service.extended.moments.length >= 4 ? 'lg:grid-cols-5' : 'lg:grid-cols-3'
                   }`}
                 >
-                  {service.extended.moments.map((moment) => (
-                    <div
-                      key={moment.name}
-                      className="border border-[#B08D57]/40 bg-[#EFE7DA]/40 p-7 space-y-3 hover:border-[#5C1A1B] transition-colors"
-                    >
-                      <h3 className="font-serif text-xl uppercase tracking-wider text-[#5C1A1B] font-light">
-                        {moment.name}
-                      </h3>
-                      <p className="font-serif italic text-sm text-[#1C1C1C]">
-                        {moment.mood}
-                      </p>
-                      <p className="text-xs text-[#555555] font-sans font-light leading-relaxed">
-                        {moment.desc}
-                      </p>
-                      {moment.elements && moment.elements.length > 0 && (
-                        <ul className="space-y-3 pt-2 border-t border-[#B08D57]/20">
-                          {moment.elements.map((el, elIdx) => (
-                            <li key={elIdx} className="flex items-start gap-2">
-                              <span className="w-1.5 h-1.5 bg-[#B08D57] rotate-45 mt-1 inline-block shrink-0" />
-                              <div>
-                                <span className="text-[11px] uppercase tracking-[0.14em] text-[#1C1C1C] font-medium block">
-                                  {el.title}
-                                </span>
-                                <span className="text-xs text-[#555555] font-sans font-light leading-relaxed">
-                                  {el.desc}
-                                </span>
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  ))}
+                  {service.extended.moments.map((moment) => {
+                    // Light tint per ritual: sage for Mehendi (henna), turmeric
+                    // yellow for Haldi, soft rose for Sangeet's festive evening.
+                    const momentBg: Record<string, string> = {
+                      Mehendi: 'bg-[#E7EDE2]',
+                      Haldi: 'bg-[#FBF0D8]',
+                      Sangeet: 'bg-[#F4E3E8]',
+                    };
+
+                    return (
+                      <div
+                        key={moment.name}
+                        className={`border border-[#B08D57]/40 ${
+                          momentBg[moment.name] ?? 'bg-[#EFE7DA]/40'
+                        } p-7 flex flex-col hover:border-[#5C1A1B] transition-colors`}
+                      >
+                        <h3 className="font-serif text-xl uppercase tracking-wider text-[#5C1A1B] font-light">
+                          {moment.name}
+                        </h3>
+                        <p className="font-serif italic text-sm text-[#1C1C1C] min-h-10 mt-3">
+                          {moment.mood}
+                        </p>
+                        <p className="text-xs text-[#555555] font-sans font-light leading-relaxed mt-3">
+                          {moment.desc}
+                        </p>
+                        {moment.elements && moment.elements.length > 0 && (
+                          <ul className="space-y-3 mt-3 pt-2 border-t border-[#B08D57]/20">
+                            {moment.elements.map((el, elIdx) => (
+                              <li key={elIdx} className="flex items-start gap-2">
+                                <span className="w-1.5 h-1.5 bg-[#B08D57] rotate-45 mt-1 inline-block shrink-0" />
+                                <div>
+                                  <span className="text-[11px] uppercase tracking-[0.14em] text-[#1C1C1C] font-medium block">
+                                    {el.title}
+                                  </span>
+                                  <span className="text-xs text-[#555555] font-sans font-light leading-relaxed">
+                                    {el.desc}
+                                  </span>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </section>
           )}
 
           {/* Process / Journey Steps */}
+          {service.process.length > 0 && (
           <section className="py-24 lg:py-32 px-6 sm:px-10 lg:px-14 bg-[#EFE7DA] border-b border-[#B08D57]/20">
             <div className="max-w-[1520px] mx-auto">
               <div className="text-center max-w-3xl mx-auto mb-20 space-y-3">
@@ -285,21 +298,29 @@ export default async function ServiceDetailPage({
 
               <div
                 className={`grid grid-cols-1 sm:grid-cols-2 gap-8 ${
-                  service.process.length >= 6 ? 'lg:grid-cols-3' : 'lg:grid-cols-5'
+                  service.process.length >= 6
+                    ? 'lg:grid-cols-3'
+                    : service.process.length === 5
+                    ? 'lg:grid-cols-5'
+                    : service.process.length === 4
+                    ? 'lg:grid-cols-4'
+                    : service.process.length === 3
+                    ? 'lg:grid-cols-3'
+                    : 'lg:grid-cols-2'
                 }`}
               >
                 {service.process.map((step) => (
                   <div
                     key={step.step}
-                    className="border border-[#B08D57]/40 bg-[#F8F4EC] p-8 space-y-4 hover:border-[#5C1A1B] transition-colors"
+                    className="border border-[#B08D57]/40 bg-[#F8F4EC] p-8 flex flex-col hover:border-[#5C1A1B] transition-colors"
                   >
                     {/* <span className="font-serif text-4xl text-[#B08D57] font-light block">
                       {step.step}
                     </span> */}
-                    <h3 className="font-serif text-xl uppercase tracking-wider text-[#1C1C1C] font-bold">
+                    <h3 className="font-serif text-xl uppercase tracking-wider text-[#1C1C1C] font-bold min-h-14">
                       {step.title}
                     </h3>
-                    <p className="text-xs text-[#555555] font-sans font-light leading-relaxed">
+                    <p className="text-xs text-[#555555] font-sans font-light leading-relaxed mt-4">
                       {step.desc}
                     </p>
                   </div>
@@ -307,6 +328,7 @@ export default async function ServiceDetailPage({
               </div>
             </div>
           </section>
+          )}
 
           {/* Why Us */}
           {service.extended.whyUs && service.extended.whyUs.length > 0 && (
@@ -328,12 +350,12 @@ export default async function ServiceDetailPage({
                   {service.extended.whyUs.map((item, idx) => (
                     <div
                       key={idx}
-                      className="border border-[#B08D57]/40 bg-[#EFE7DA]/40 p-7 space-y-3 hover:border-[#5C1A1B] transition-colors"
+                      className="border border-[#B08D57]/40 bg-[#EFE7DA]/40 p-7 flex flex-col hover:border-[#5C1A1B] transition-colors"
                     >
-                      <h3 className="font-serif text-lg uppercase tracking-wider text-[#1C1C1C] font-light">
+                      <h3 className="font-serif text-lg uppercase tracking-wider text-[#1C1C1C] font-light min-h-14">
                         {item.title}
                       </h3>
-                      <p className="text-xs text-[#555555] font-sans font-light leading-relaxed">
+                      <p className="text-xs text-[#555555] font-sans font-light leading-relaxed mt-3">
                         {item.desc}
                       </p>
                     </div>

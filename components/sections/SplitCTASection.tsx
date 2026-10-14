@@ -84,9 +84,9 @@ export default function SplitCTASection() {
           <div className="lg:col-span-6 text-center space-y-8 px-4">
             <Reveal delay={0.1}>
               <div className="space-y-4">
-                <span className="text-[10px] uppercase tracking-[0.35em] text-[#8E7145] font-sans font-medium block">
+                {/* <span className="text-[10px] uppercase tracking-[0.35em] text-[#8E7145] font-sans font-medium block">
                   Private Commissions
-                </span>
+                </span> */}
                 <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl uppercase tracking-tight font-light leading-[1.1] text-[#1C1C1C]">
                   Let Us Plan The Celebration Of A Lifetime
                 </h2>
@@ -107,7 +107,7 @@ export default function SplitCTASection() {
                     href="/contact"
                     className="btn-luxury-maroon text-xs"
                   >
-                    Speak To A Wedding Specialist
+                    Consult a Wedding Planner
                   </Link>
                 </MagneticButton>
                 <Link

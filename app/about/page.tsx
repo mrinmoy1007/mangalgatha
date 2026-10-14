@@ -77,7 +77,7 @@ export default function AboutPage() {
           <div className="lg:col-span-7 space-y-8 lg:pl-6">
             <Reveal delay={0.1}>
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans font-medium block">
-                OUR PHILOSOPHY
+                Request a Consultation
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight font-light text-[#1C1C1C] mt-2">
                 {founder.name}
@@ -204,16 +204,20 @@ export default function AboutPage() {
 
       {/* Closing Story Section */}
       <section className="py-24 lg:py-36 px-6 sm:px-10 lg:px-14 text-center bg-[#1C1C1C] text-[#F8F4EC]">
-        <div className="max-w-2xl mx-auto space-y-6">
+        <div className="max-w-4xl mx-auto space-y-6">
           <Reveal>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight font-light text-[#F8F4EC] leading-[1.15]">
-              {closing.heading}
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight font-light text-[#F8F4EC] leading-[1.15] text-balance">
+              {closing.heading.split(/(?<=\.)\s+/).map((line, idx) => (
+                <span key={idx} className="block">
+                  {line}
+                </span>
+              ))}
             </h2>
             <div className="w-16 h-[1px] bg-[#B08D57] mx-auto mt-6" />
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="space-y-4 pt-2">
+            <div className="max-w-2xl mx-auto space-y-4 pt-2">
               {closing.paragraphs.map((p, idx) => (
                 <p
                   key={idx}

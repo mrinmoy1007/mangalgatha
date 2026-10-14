@@ -18,7 +18,7 @@ export const destinationsData: Destination[] = [
     region: 'Rajasthan',
     country: 'India',
     tagline: 'The Venice of the East & City of Lakes',
-    description: 'Floating palaces amidst sapphire waters, ornate marble courtyards, and sun-kissed Aravali peaks. Udaipur offers an ethereal, romantic royal backdrop where ceremonies unfold upon private islands and historic terraces.',
+    description: 'Floating palaces amidst sapphire waters, ornate marble courtyards, and sun-kissed Aravali peaks. Udaipur offers an ethereal, romantic royal backdrop where ceremonies unfold upon private palaces and historic terraces.',
     bestSeason: 'October to March',
     featuredVenues: ['Taj Lake Palace', 'The Leela Palace Udaipur', 'Jagmandir Island Palace', 'Oberoi Udaivilas'],
     image: '/images/udaipur.jpg',

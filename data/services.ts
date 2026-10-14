@@ -134,24 +134,81 @@ export const servicesData: Service[] = [
     heroImage: '/images/DSC_1.JPG.png',
     alt: 'Royal Indian destination wedding couple portrait overlooking palace waters',
     features: [
-      'Private Island & Heritage Palace Buyouts',
-      'Charter Flights & Fleet Coordination',
-      'Global Legal, Priest & Ritual Compliance',
-      'Curated Destination Welcome Gift Boxes',
-      'Multi-day Guest Excursions & Rehearsals'
+      'Exclusive Beachfront & Heritage Palace Celebrations',
+      'Luxury Guest Hospitality & Accommodation Coordination',
+      'Wedding Ceremonies, Rituals & Legal Arrangements',
+      'Welcome Hampers & Guest Gifting',
+      'Curated Pre-Wedding Experiences & Multi-Day Excursions'
     ],
-    process: [
-      { step: '01', title: 'Global Venue Scouting', desc: 'Curating vetted heritage estates, private sandbars, and fortress cloisters.' },
-      { step: '02', title: 'Air & Ground Fleet Protocol', desc: 'Seamless chartering, transfers, luggage tagging, and royal welcomes.' },
-      { step: '03', title: 'Cross-Border Production', desc: 'Exporting master chefs, custom floral structures, and Indian artisans worldwide.' },
-      { step: '04', title: 'Destination Concierge', desc: '24/7 bilingual liaison managing room drops, styling emergencies, and excursions.' }
-    ],
+    process: [],
     gallery: [
       '/images/Untitled design 9.png',
       '/images/Untitled design 18.png',
       '/images/Untitled design 32.png',
       '/images/Untitled design 11.png'
     ],
+    extended: {
+      introEyebrow: 'The Destination Experience',
+      introHeading: 'Why Have One Beautiful Day When You Can Create a Beautiful Journey?',
+      introQuote: 'A destination wedding gives you something a traditional wedding sometimes cannot — time.',
+      introParagraphs: [
+        'Time to welcome your people.',
+        'Time to laugh over breakfast.',
+        'Time to dance without watching the clock.',
+        'Time for families to meet, friends to reconnect and new memories to begin.',
+        'The wedding itself becomes part of a larger story — one that starts with the first arrival and ends long after the last farewell.',
+        'At Mangalgatha, we thoughtfully curate that entire journey.',
+        'From the moment your guests arrive to the moment they leave with memories they will talk about for years, every experience is planned with intention.'
+      ],
+      offeringsHeading: 'Every Part of the Journey, Beautifully Orchestrated.',
+      offeringsSubheading: 'A destination wedding has more moving pieces than a single-day celebration. We bring them together so you can focus on the people and moments that matter.',
+      offeringsLayout: 'grid',
+      offerings: [
+        { number: '01', title: 'Destination & Venue Curation', desc: "The place where your story unfolds. We help identify and curate destinations and venues that align with your wedding vision, guest profile, celebrations and overall experience. From heritage properties and luxury resorts to intimate escapes and extraordinary destination settings, the search begins with what feels right for you." },
+        { number: '02', title: 'Travel & Guest Logistics', desc: "From “we're here” to “we're home.” Your guests are part of your celebration. We thoughtfully coordinate arrival information, transfers, accommodation logistics and movement between wedding events to make their journey feel comfortable and considered." },
+        { number: '03', title: 'Welcome Experiences', desc: 'The celebration begins before the wedding. Welcome dinners, local experiences, personalised touches and thoughtful surprises set the tone for everything that follows.' },
+        { number: '04', title: 'Wedding Design & Décor', desc: 'Let the destination inspire the celebration. We create design concepts that respond to the character of the destination while remaining unmistakably yours — architecture, landscape, florals, textures, lighting, colour and Indian craftsmanship brought together into spaces that feel immersive and intentional.' },
+        { number: '05', title: 'Multi-Day Celebrations', desc: 'More days. More memories. From intimate welcome gatherings and mehendi afternoons to sangeet evenings, wedding ceremonies and farewell celebrations, we curate the complete wedding weekend — every event with its own mood, yet belonging to the same story.' },
+        { number: '06', title: 'Hospitality & Guest Experience', desc: 'Make your guests feel like they belong. A beautiful destination becomes truly memorable when people feel cared for, so we think through the little things — welcome amenities, personalised touches, event information and on-ground assistance — so your guests can simply enjoy being there.' },
+        { number: '07', title: 'Local Experiences', desc: "Let them discover a little more. The destination itself can become part of the celebration. Where appropriate, we curate thoughtful local experiences that let your guests discover the culture, flavours, craftsmanship and character of the place you've chosen." },
+        { number: '08', title: 'On-Ground Execution', desc: 'You celebrate. We keep the journey moving. From setup and vendor coordination to event transitions and guest movement, our team manages the details behind the scenes so every celebration flows beautifully.' }
+      ],
+      soundtrackHeading: 'One Destination. Many Beautiful Chapters.',
+      soundtrackIntro: ['The celebration unfolds.'],
+      moments: [
+        { name: 'The Arrival', mood: 'The beginning of the weekend.', desc: 'The first hugs. The first glimpse of the destination.' },
+        { name: 'The Welcome', mood: 'Setting the mood for everything ahead.', desc: 'An evening designed to bring everyone together and set the mood for everything ahead.' },
+        { name: 'The Celebrations', mood: 'Each celebration with its own personality.', desc: 'Mehendi, haldi, sangeet, cocktails and intimate dinners.' },
+        { name: 'The Wedding', mood: 'The moment everyone came for.', desc: 'Your traditions, your vows, your people and your story.' },
+        { name: 'The Farewell', mood: 'One more hug before everyone heads home.', desc: 'One last meal. One last photograph — carrying a piece of the celebration with them.' }
+      ],
+      journeyHeading: 'How We Plan Your Destination Wedding',
+      philosophy: [
+        {
+          heading: "We Don't Just Find a Destination. We Find the Right Setting for Your Story.",
+          subheading: "The perfect destination isn't simply the one with the most beautiful view.",
+          paragraphs: [
+            'It is the one that feels right for you.',
+            'Maybe you imagine an intimate celebration surrounded by heritage and history.',
+            'Maybe your dream is a sun-kissed celebration by the sea.',
+            'Maybe it is a grand royal wedding filled with Indian traditions and timeless architecture.',
+            'Or perhaps you want something completely unexpected.',
+            'We begin with your vision and build the destination experience around it — from the setting and celebrations to hospitality, design and the smallest guest details.',
+            'Because the destination should never overshadow your story. It should become part of it.'
+          ]
+        }
+      ],
+      closing: {
+        heading: ['Somewhere Beautiful.', 'With Everyone You Love.'],
+        paragraphs: [
+          'The world is full of beautiful places.',
+          'But the place becomes unforgettable when it holds your people, your rituals, your laughter and your love.',
+          'Tell us where you dream of saying I do.',
+          "We'll create the story around it."
+        ],
+        ctaText: 'Start Planning Your Destination Wedding'
+      }
+    },
     homeSlider: {
       tagline: 'Take Your Love Story Somewhere Beautiful.',
       paragraphs: [

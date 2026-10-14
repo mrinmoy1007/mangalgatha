@@ -27,12 +27,9 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       touchMultiplier: 1.5,
     });
 
-    // Sync Lenis scroll with GSAP ScrollTrigger and track velocity as primitive number
-    lenis.on('scroll', (e: { velocity?: number }) => {
+    // Sync Lenis scroll with GSAP ScrollTrigger
+    lenis.on('scroll', () => {
       ScrollTrigger.update();
-      if (typeof window !== 'undefined') {
-        (window as unknown as { __scrollVelocity?: number }).__scrollVelocity = Math.abs(e.velocity || 0);
-      }
     });
 
     const updateTicker = (time: number) => {
@@ -45,9 +42,6 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     return () => {
       gsap.ticker.remove(updateTicker);
       lenis.destroy();
-      if (typeof window !== 'undefined') {
-        delete (window as unknown as { __scrollVelocity?: number }).__scrollVelocity;
-      }
     };
   }, []);
 

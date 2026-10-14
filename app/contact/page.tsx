@@ -53,7 +53,7 @@ export default function ContactPage() {
             {/* Direct Studio Phones */}
             <div className="border border-[#B08D57]/40 bg-[#EFE7DA]/50 p-8 space-y-6">
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7145] font-sans block">
-                Direct Studio Lines
+                Connect with Mangalgatha
               </span>
 
               <div className="space-y-6">

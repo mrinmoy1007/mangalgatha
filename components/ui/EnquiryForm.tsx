@@ -31,6 +31,8 @@ export default function EnquiryForm() {
     register,
     handleSubmit,
     reset,
+    setValue,
+    watch,
     formState: { errors },
   } = useForm<EnquiryFormData>({
     resolver: zodResolver(enquirySchema),
@@ -46,6 +48,10 @@ export default function EnquiryForm() {
     },
   });
 
+  const [destinationOther, setDestinationOther] = useState(false);
+  const [guestCountOther, setGuestCountOther] = useState(false);
+  const [budgetOther, setBudgetOther] = useState(false);
+
   const onSubmit = (data: EnquiryFormData) => {
     startTransition(async () => {
       const formData = new FormData();
@@ -58,6 +64,9 @@ export default function EnquiryForm() {
 
       if (result.success) {
         reset();
+        setDestinationOther(false);
+        setGuestCountOther(false);
+        setBudgetOther(false);
       }
     });
   };
@@ -165,7 +174,16 @@ export default function EnquiryForm() {
               Preferred City or Destination *
             </label>
             <select
-              {...register('destination')}
+              value={destinationOther ? 'Other' : watch('destination')}
+              onChange={(e) => {
+                if (e.target.value === 'Other') {
+                  setDestinationOther(true);
+                  setValue('destination', '', { shouldValidate: true });
+                } else {
+                  setDestinationOther(false);
+                  setValue('destination', e.target.value, { shouldValidate: true });
+                }
+              }}
               className="w-full bg-white/70 border border-[#B08D57]/40 px-4 py-3 text-xs text-[#1C1C1C] font-sans focus:outline-hidden focus:border-[#5C1A1B] transition-colors"
             >
               <option value="Udaipur, Rajasthan">Udaipur, Rajasthan</option>
@@ -175,8 +193,20 @@ export default function EnquiryForm() {
               <option value="Goa (Beachside / Heritage Villa)">Goa (Beachside / Heritage Villa)</option>
               <option value="Mussoorie / Himalayas">Mussoorie / Himalayas</option>
               <option value="Kolkata / West Bengal ">Kolkata / West Bengal </option>
-              <option value="Other Global Locations">Other Global Locations </option>
+              <option value="Other">Other (please specify)</option>
             </select>
+            {destinationOther && (
+              <input
+                {...register('destination')}
+                type="text"
+                placeholder="Please specify your preferred city or destination"
+                autoFocus
+                className="mt-2 w-full bg-white/70 border border-[#B08D57]/40 px-4 py-3 text-xs text-[#1C1C1C] font-sans focus:outline-hidden focus:border-[#5C1A1B] transition-colors"
+              />
+            )}
+            {errors.destination && (
+              <p className="text-[10px] text-[#5C1A1B] font-sans">{errors.destination.message}</p>
+            )}
           </div>
 
           <div className="space-y-1.5">
@@ -184,14 +214,36 @@ export default function EnquiryForm() {
               Estimated Guest Count *
             </label>
             <select
-              {...register('guestCount')}
+              value={guestCountOther ? 'Other' : watch('guestCount')}
+              onChange={(e) => {
+                if (e.target.value === 'Other') {
+                  setGuestCountOther(true);
+                  setValue('guestCount', '', { shouldValidate: true });
+                } else {
+                  setGuestCountOther(false);
+                  setValue('guestCount', e.target.value, { shouldValidate: true });
+                }
+              }}
               className="w-full bg-white/70 border border-[#B08D57]/40 px-4 py-3 text-xs text-[#1C1C1C] font-sans focus:outline-hidden focus:border-[#5C1A1B] transition-colors"
             >
               <option value="Intimate (50 – 150 Guests)">Intimate (50 – 150 Guests)</option>
               <option value="Grand (150 – 350 Guests)">Grand (150 – 350 Guests)</option>
               <option value="Royal (350 – 600 Guests)">Royal (350 – 600 Guests)</option>
               <option value="Epic (600 – 1,500+ Guests)">Epic (600 – 1,500+ Guests)</option>
+              <option value="Other">Other (please specify)</option>
             </select>
+            {guestCountOther && (
+              <input
+                {...register('guestCount')}
+                type="text"
+                placeholder="Please specify your estimated guest count"
+                autoFocus
+                className="mt-2 w-full bg-white/70 border border-[#B08D57]/40 px-4 py-3 text-xs text-[#1C1C1C] font-sans focus:outline-hidden focus:border-[#5C1A1B] transition-colors"
+              />
+            )}
+            {errors.guestCount && (
+              <p className="text-[10px] text-[#5C1A1B] font-sans">{errors.guestCount.message}</p>
+            )}
           </div>
         </div>
 
@@ -201,7 +253,16 @@ export default function EnquiryForm() {
             Estimated Budget Range (INR) *
           </label>
           <select
-            {...register('budget')}
+            value={budgetOther ? 'Other' : watch('budget')}
+            onChange={(e) => {
+              if (e.target.value === 'Other') {
+                setBudgetOther(true);
+                setValue('budget', '', { shouldValidate: true });
+              } else {
+                setBudgetOther(false);
+                setValue('budget', e.target.value, { shouldValidate: true });
+              }
+            }}
             className="w-full bg-white/70 border border-[#B08D57]/40 px-4 py-3 text-xs text-[#1C1C1C] font-sans focus:outline-hidden focus:border-[#5C1A1B] transition-colors"
           >
             <option value="Under ₹10 Lakhs"> Under ₹10 Lakhs</option>
@@ -209,7 +270,20 @@ export default function EnquiryForm() {
             <option value="₹1.0 Crore – ₹3.0 Crore">₹1.0 Crore – ₹3.0 Crore</option>
             <option value="₹3.0 Crore – ₹6.0 Crore">₹3.0 Crore – ₹6.0 Crore</option>
             <option value="₹6.0 Crore+ ">₹6.0 Crore+  </option>
+            <option value="Other">Other (please specify)</option>
           </select>
+          {budgetOther && (
+            <input
+              {...register('budget')}
+              type="text"
+              placeholder="Please specify your estimated budget range"
+              autoFocus
+              className="mt-2 w-full bg-white/70 border border-[#B08D57]/40 px-4 py-3 text-xs text-[#1C1C1C] font-sans focus:outline-hidden focus:border-[#5C1A1B] transition-colors"
+            />
+          )}
+          {errors.budget && (
+            <p className="text-[10px] text-[#5C1A1B] font-sans">{errors.budget.message}</p>
+          )}
         </div>
 
         {/* Message */}

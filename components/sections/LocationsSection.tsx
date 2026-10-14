@@ -57,7 +57,7 @@ export default function LocationsSection() {
       </div>
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-6 sm:px-10 lg:px-14 w-full">
-        <div className="text-center max-w-3xl mx-auto space-y-6">
+        <div className="text-center space-y-6">
           <Reveal delay={0.1}>
             <div className="flex items-center justify-center gap-3">
               <div className="w-12 h-[1px] bg-[#B08D57]" />
@@ -67,15 +67,15 @@ export default function LocationsSection() {
           </Reveal>
 
           <Reveal delay={0.2}>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight font-light text-[#F8F4EC]">
+            <h2 className="font-serif text-[clamp(1.1rem,5.2vw,3.75rem)] uppercase tracking-tight font-light text-[#F8F4EC] whitespace-nowrap">
               Celebrations Across India
             </h2>
           </Reveal>
 
           <Reveal delay={0.3}>
-            <p className="text-sm sm:text-base text-[#EFE7DA]/85 font-sans font-light leading-relaxed">
-              We welcome prospective couples by private appointment at our design studios in Delhi NCR and Kolkata to review material portfolios, botanical palettes, and custom wedding narratives.
-            </p>
+            <p className="max-w-2xl mx-auto text-sm sm:text-base text-[#EFE7DA]/85 font-sans font-light leading-relaxed">
+            We invite you to a private consultation with Mangalgatha, where timeless elegance meets thoughtful artistry. Discover  design concepts, exquisite details, and a wedding narrative curated exclusively around your vision.  
+           </p>
           </Reveal>
 
           <Reveal delay={0.4}>
