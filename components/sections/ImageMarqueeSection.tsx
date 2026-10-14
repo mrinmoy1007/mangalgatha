@@ -56,7 +56,7 @@ export default function ImageMarqueeSection() {
       </div>
 
       <Reveal delay={0.1}>
-        <ImageMarquee images={images} direction="left" speed={55} />
+        <ImageMarquee images={images} direction="left" speed={140} />
       </Reveal>
     </section>
   );

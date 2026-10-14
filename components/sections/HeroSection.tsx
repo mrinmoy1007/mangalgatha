@@ -117,13 +117,13 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-screen h-screen flex flex-col justify-between items-center bg-[#5C1A1B] text-[#F8F4EC] overflow-hidden pt-28 pb-10"
+      className="relative w-full min-h-screen h-screen flex flex-col justify-between items-center bg-[#5C1A1B] text-[#F8F4EC] overflow-hidden pt-24 pb-0 lg:pt-28 lg:pb-10"
     >
       {/* Background radial gradient to give cinematic luxury depth */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#5C1A1B] via-[#5C1A1B]/40 to-[#5C1A1B] pointer-events-none z-0" />
 
       {/* Main Collage Layout */}
-      <div className="relative z-10 w-full max-w-[1520px] mx-auto px-4 sm:px-8 flex-1 flex items-center justify-center">
+      <div className="z-10 lg:relative w-full max-w-[1520px] mx-auto px-0 lg:px-8 flex-1 flex items-center justify-center">
         {/* Left Side Images (Two staggered portrait photos) */}
         <div
           ref={leftGroupRef}
@@ -147,7 +147,7 @@ export default function HeroSection() {
         {/* Center Media (Centered Portrait Video / Cinematic Loop with Poster) */}
         <div
           ref={centerMediaRef}
-          className="w-[85vw] sm:w-[50vw] lg:w-[28vw] max-w-[420px] aspect-[9/15] relative overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.8)] border border-[#B08D57]/50 z-20 transition-all hero-stagger-img"
+          className="absolute inset-0 w-full h-full overflow-hidden z-20 transition-all hero-stagger-img lg:relative lg:inset-auto lg:w-[28vw] lg:max-w-[420px] lg:h-auto lg:aspect-[9/15] lg:shadow-[0_25px_60px_rgba(0,0,0,0.8)] lg:border lg:border-[#B08D57]/50"
           data-cursor="view"
           data-cursor-text="PLAY"
         >
@@ -194,12 +194,10 @@ export default function HeroSection() {
         {/* Serif Overlay Headline across Center */}
         <div
           ref={headlineRef}
-          className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none z-30 px-4"
+          className="absolute inset-0 flex flex-col items-center justify-start lg:justify-center text-center pointer-events-none z-30 px-4 pt-32 lg:pt-0"
         >
           <div className="space-y-3 max-w-4xl">
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-[#D4AF7A] font-sans block drop-shadow-md">
-              Luxury Wedding Celebrations
-            </span>
+
             <h1 className="font-serif text-[clamp(2.5rem,6vw,6rem)] leading-[1.05] tracking-tight font-light  text-[#F8F4EC] drop-shadow-xl">
               Every Wedding Is A{' '}
               <span className="italic font-normal text-[#D4AF7A] uppercase">STORY</span>
